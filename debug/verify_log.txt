@@ -1,0 +1,576 @@
+
+=== 2026-11-21 17:28:26  aiming fixed-jaw tip, T_base_cam translation (mm) [ 240. -125.  584.], XY correction (mm) [0. 0.] ===
+point x 164  y -85  z -0 mm  (pixel 253,245)  -> press g
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    164  y    -85  z     40 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    163  y    -85  z     40 mm   -> off by x -1 y +0 z -0 mm
+  joint sag before correction (deg): [-0.5  0.1  2.1  0.2  0.6]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    164  y    -83  z     40 mm   (nudge so far x +0 y +2 mm)
+  fixed-jaw tip (servos)  x    163  y    -83  z     38 mm   -> off by x -1 y +1 z -2 mm
+  joint sag before correction (deg): [ 0.3  0.9  0.1  0.4 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    164  y    -85  z     40 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    162  y    -85  z     38 mm   -> off by x -1 y +0 z -1 mm
+  joint sag before correction (deg): [-0.6  0.2  0.9 -0.1 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -85  z     40 mm   (nudge so far x +2 y +0 mm)
+  fixed-jaw tip (servos)  x    166  y    -85  z     39 mm   -> off by x -0 y +0 z -1 mm
+  joint sag before correction (deg): [ 0.3  0.3  1.7 -0.2 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    168  y    -85  z     40 mm   (nudge so far x +4 y +0 mm)
+  fixed-jaw tip (servos)  x    168  y    -85  z     39 mm   -> off by x -0 y +1 z -1 mm
+  joint sag before correction (deg): [ 0.6  0.3  1.5 -0.5 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -85  z     40 mm   (nudge so far x +2 y +0 mm)
+  fixed-jaw tip (servos)  x    166  y    -85  z     39 mm   -> off by x -0 y +0 z -1 mm
+  joint sag before correction (deg): [-0.5  1.4 -0.1  0.  -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    164  y    -85  z     40 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    163  y    -85  z     39 mm   -> off by x -1 y +1 z -1 mm
+  joint sag before correction (deg): [-0.4  1.5 -0.1  0.2 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -85  z     40 mm   (nudge so far x +2 y +0 mm)
+  fixed-jaw tip (servos)  x    164  y    -84  z     38 mm   -> off by x -1 y +1 z -2 mm
+  joint sag before correction (deg): [ 0.4  0.3  0.9  0.  -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -87  z     40 mm   (nudge so far x +2 y -2 mm)
+  fixed-jaw tip (servos)  x    165  y    -87  z     39 mm   -> off by x -0 y +0 z -1 mm
+  joint sag before correction (deg): [-0.5  0.2  1.5 -0.2 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -89  z     40 mm   (nudge so far x +2 y -4 mm)
+  fixed-jaw tip (servos)  x    165  y    -89  z     39 mm   -> off by x -1 y +0 z -1 mm
+  joint sag before correction (deg): [-0.5  0.2  1.1 -0.3 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -91  z     40 mm   (nudge so far x +2 y -6 mm)
+  fixed-jaw tip (servos)  x    165  y    -91  z     39 mm   -> off by x -0 y +0 z -1 mm
+  joint sag before correction (deg): [-0.5  0.2  1.5 -0.3 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -93  z     40 mm   (nudge so far x +2 y -8 mm)
+  fixed-jaw tip (servos)  x    166  y    -93  z     39 mm   -> off by x +0 y +0 z -1 mm
+  joint sag before correction (deg): [-0.5  0.2  1.3 -0.2 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -91  z     40 mm   (nudge so far x +2 y -6 mm)
+  fixed-jaw tip (servos)  x    166  y    -91  z     38 mm   -> off by x -0 y +1 z -1 mm
+  joint sag before correction (deg): [ 0.4  1.1  0.1 -0.1 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -89  z     40 mm   (nudge so far x +2 y -4 mm)
+  fixed-jaw tip (servos)  x    166  y    -89  z     40 mm   -> off by x -0 y +0 z -0 mm
+  joint sag before correction (deg): [ 0.6  1.6 -0.1  0.  -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -87  z     40 mm   (nudge so far x +2 y -2 mm)
+  fixed-jaw tip (servos)  x    165  y    -86  z     39 mm   -> off by x -0 y +1 z -1 mm
+  joint sag before correction (deg): [ 0.5  1.1  0.1  0.1 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -85  z     40 mm   (nudge so far x +2 y +0 mm)
+  fixed-jaw tip (servos)  x    166  y    -85  z     39 mm   -> off by x -0 y +1 z -1 mm
+  joint sag before correction (deg): [ 0.5  1.2 -0.1  0.2 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -83  z     40 mm   (nudge so far x +2 y +2 mm)
+  fixed-jaw tip (servos)  x    166  y    -83  z     39 mm   -> off by x -0 y +0 z -1 mm
+  joint sag before correction (deg): [ 0.5  1.2  0.   0.  -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -81  z     40 mm   (nudge so far x +2 y +4 mm)
+  fixed-jaw tip (servos)  x    165  y    -81  z     39 mm   -> off by x -1 y +1 z -1 mm
+  joint sag before correction (deg): [ 0.3  1.3 -0.1  0.1 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -79  z     40 mm   (nudge so far x +2 y +6 mm)
+  fixed-jaw tip (servos)  x    165  y    -79  z     38 mm   -> off by x -1 y +1 z -2 mm
+  joint sag before correction (deg): [ 0.5  0.7 -0.1  0.  -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -77  z     40 mm   (nudge so far x +2 y +8 mm)
+  fixed-jaw tip (servos)  x    166  y    -76  z     40 mm   -> off by x +0 y +1 z +0 mm
+  joint sag before correction (deg): [ 0.6  1.8 -0.   0.1 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -75  z     40 mm   (nudge so far x +2 y +10 mm)
+  fixed-jaw tip (servos)  x    165  y    -74  z     38 mm   -> off by x -1 y +1 z -1 mm
+  joint sag before correction (deg): [ 0.3  0.9 -0.1  0.2 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -73  z     40 mm   (nudge so far x +2 y +12 mm)
+  fixed-jaw tip (servos)  x    165  y    -72  z     39 mm   -> off by x -1 y +1 z -1 mm
+  joint sag before correction (deg): [ 0.5  1.4  0.3  0.  -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -71  z     40 mm   (nudge so far x +2 y +14 mm)
+  fixed-jaw tip (servos)  x    165  y    -71  z     39 mm   -> off by x -1 y +1 z -0 mm
+  joint sag before correction (deg): [ 0.5  1.2  0.2  0.1 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -69  z     40 mm   (nudge so far x +2 y +16 mm)
+  fixed-jaw tip (servos)  x    165  y    -69  z     39 mm   -> off by x -1 y +1 z -1 mm
+  joint sag before correction (deg): [ 0.4  0.9  0.2  0.1 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -67  z     40 mm   (nudge so far x +2 y +18 mm)
+  fixed-jaw tip (servos)  x    165  y    -67  z     39 mm   -> off by x -0 y +0 z -0 mm
+  joint sag before correction (deg): [ 0.4  1.4  0.1  0.3 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -65  z     40 mm   (nudge so far x +2 y +20 mm)
+  fixed-jaw tip (servos)  x    165  y    -65  z     39 mm   -> off by x -1 y +1 z -1 mm
+  joint sag before correction (deg): [ 0.4  1.   0.1  0.1 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    166  y    -63  z     40 mm   (nudge so far x +2 y +22 mm)
+  fixed-jaw tip (servos)  x    165  y    -63  z     40 mm   -> off by x -1 y +1 z -0 mm
+  joint sag before correction (deg): [ 0.4  1.4  0.2  0.2 -0. ]  [pan lift elbow wrist roll]
+saved XY correction x +2.0 y +22.0 mm (camera_offset.json). Check other X marks
+point x 216  y -119  z 6 mm  (pixel 226,171)  -> press g
+IK ok (0.2 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    216  y   -119  z     46 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    217  y   -120  z     47 mm   -> off by x +1 y -0 z +0 mm
+  joint sag before correction (deg): [-0.4  0.1  2.4  0.7 -0. ]  [pan lift elbow wrist roll]
+point x 277  y 22  z -19 mm  (pixel 110,285)  -> press g
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    277  y     22  z     21 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    277  y     23  z     21 mm   -> off by x -0 y +0 z -1 mm
+  joint sag before correction (deg): [ 0.5  0.2  2.   0.7 -0. ]  [pan lift elbow wrist roll]
+point x 132  y 48  z -13 mm  (pixel 242,359)  -> press g
+IK ok (0.3 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    132  y     48  z     27 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    131  y     48  z     27 mm   -> off by x -1 y -0 z -0 mm
+  joint sag before correction (deg): [ 0.4  1.6 -0.2 -0.6 -0. ]  [pan lift elbow wrist roll]
+point x 256  y 36  z -17 mm  (pixel 126,306)  -> press g
+IK ok (0.2 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    256  y     36  z     23 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    256  y     37  z     23 mm   -> off by x +0 y +1 z -1 mm
+  joint sag before correction (deg): [-0.4  0.2  2.1  0.4 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    258  y     36  z     23 mm   (nudge so far x +2 y +0 mm)
+  fixed-jaw tip (servos)  x    258  y     36  z     23 mm   -> off by x +0 y -0 z -0 mm
+  joint sag before correction (deg): [-0.3  0.2  1.5 -0.3 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    260  y     36  z     23 mm   (nudge so far x +4 y +0 mm)
+  fixed-jaw tip (servos)  x    259  y     36  z     22 mm   -> off by x -1 y -0 z -2 mm
+  joint sag before correction (deg): [ 0.   0.2  1.4 -0.2 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    262  y     36  z     23 mm   (nudge so far x +6 y +0 mm)
+  fixed-jaw tip (servos)  x    260  y     36  z     22 mm   -> off by x -1 y +0 z -2 mm
+  joint sag before correction (deg): [-0.1  0.2  1.8 -0.4 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    264  y     36  z     23 mm   (nudge so far x +8 y +0 mm)
+  fixed-jaw tip (servos)  x    264  y     37  z     23 mm   -> off by x +0 y +1 z -0 mm
+  joint sag before correction (deg): [-0.1  0.1  2.1 -0.3 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    264  y     38  z     23 mm   (nudge so far x +8 y +2 mm)
+  fixed-jaw tip (servos)  x    262  y     37  z     20 mm   -> off by x -2 y -1 z -3 mm
+  joint sag before correction (deg): [ 0.4  0.3  0.7 -0.2 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    264  y     36  z     23 mm   (nudge so far x +8 y +0 mm)
+  fixed-jaw tip (servos)  x    261  y     36  z     20 mm   -> off by x -2 y +0 z -3 mm
+  joint sag before correction (deg): [-0.1  1.1  1.  -0.1 -0. ]  [pan lift elbow wrist roll]
+--- arrived (nudged) ---
+  target               x    264  y     34  z     23 mm   (nudge so far x +8 y -2 mm)
+  fixed-jaw tip (servos)  x    263  y     34  z     22 mm   -> off by x -1 y +0 z -2 mm
+  joint sag before correction (deg): [-0.5  1.4  0.8 -0.1 -0. ]  [pan lift elbow wrist roll]
+point x 95  y -131  z 18 mm  (pixel 350,208)  -> press g
+IK ok (0.2 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x     95  y   -131  z     58 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x     95  y   -131  z     59 mm   -> off by x +0 y -0 z +1 mm
+  joint sag before correction (deg): [-0.5  2.5 -0.  -0.4 -0. ]  [pan lift elbow wrist roll]
+point x 217  y -123  z 8 mm  (pixel 226,167)  -> press g
+point x 94  y -52  z 251 mm  (pixel 401,353)  -> press g
+point x 214  y -126  z 11 mm  (pixel 230,165)  -> press g
+IK ok (0.2 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    214  y   -126  z     51 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    214  y   -125  z     50 mm   -> off by x -0 y +0 z -1 mm
+  joint sag before correction (deg): [ 0.4  0.2  2.3  0.5 -0. ]  [pan lift elbow wrist roll]
+point x 276  y 21  z -16 mm  (pixel 111,284)  -> press g
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    276  y     21  z     24 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    276  y     21  z     22 mm   -> off by x +0 y +1 z -1 mm
+  joint sag before correction (deg): [ 0.4  0.4  2.   0.7 -0. ]  [pan lift elbow wrist roll]
+
+=== 2026-11-21 17:49:06  aiming fixed-jaw tip, T_base_cam translation (mm) [ 221. -196.  563.], XY correction (mm) [0. 0.] ===
+point x 160  y -111  z -1 mm  (pixel 291,220)  -> press g
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    160  y   -111  z     39 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    161  y   -110  z     39 mm   -> off by x +1 y +1 z -1 mm
+  joint sag before correction (deg): [-0.3  0.2  1.6  0.5 -0.5]  [pan lift elbow wrist roll]
+point x 315  y -20  z -3 mm  (pixel 103,267)  -> press g
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    315  y    -20  z     37 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    315  y    -20  z     36 mm   -> off by x +0 y +0 z -1 mm
+  joint sag before correction (deg): [0.3 0.2 2.2 0.6 0. ]  [pan lift elbow wrist roll]
+point x 118  y -39  z -1 mm  (pixel 312,302)  -> press g
+IK ok (0.3 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    118  y    -39  z     39 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    118  y    -39  z     39 mm   -> off by x +0 y +0 z +0 mm
+  joint sag before correction (deg): [-0.4  1.1 -0.1 -0.5  0. ]  [pan lift elbow wrist roll]
+point x 228  y -141  z -1 mm  (pixel 229,169)  -> press g
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    228  y   -141  z     39 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    228  y   -140  z     39 mm   -> off by x +0 y +0 z -0 mm
+  joint sag before correction (deg): [-0.4  0.2  2.   0.4  0. ]  [pan lift elbow wrist roll]
+point x 112  y -140  z 3 mm  (pixel 350,205)  -> press g
+point x 128  y 88  z -2 mm  (pixel 265,416)  -> press g
+point x -12  y -85  z 1 mm  (pixel 451,293)  -> press g
+point x -4  y -119  z 1 mm  (pixel 455,258)  -> press g
+point x 266  y -7  z -1 mm  (pixel 152,294)  -> press g
+IK ok (0.2 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    266  y     -7  z     39 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    265  y     -8  z     39 mm   -> off by x -1 y -0 z -1 mm
+  joint sag before correction (deg): [0.3 3.1 0.1 0.4 0. ]  [pan lift elbow wrist roll]
+point x -198  y -61  z -214 mm  (pixel 520,298)  -> press g
+point x -21  y -158  z 1 mm  (pixel 485,225)  -> press g
+IK ok (2.6 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    -21  y   -158  z     41 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    -18  y   -157  z     39 mm   -> off by x +3 y +1 z -2 mm
+  joint sag before correction (deg): [-0.4  1.  -0.1 -0.8  0. ]  [pan lift elbow wrist roll]
+point x 232  y -74  z 1 mm  (pixel 206,237)  -> press g
+IK ok (0.2 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    232  y    -74  z     41 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    231  y    -74  z     41 mm   -> off by x -0 y -0 z +0 mm
+  joint sag before correction (deg): [ 0.3  2.8 -0.2  0.4  0. ]  [pan lift elbow wrist roll]
+point x 373  y -166  z -2 mm  (pixel 75,93)  -> press g
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    373  y   -166  z     38 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    374  y   -167  z     38 mm   -> off by x +1 y -0 z -0 mm
+  joint sag before correction (deg): [-0.4  0.5  2.4  1.   0. ]  [pan lift elbow wrist roll]
+point x -18  y -154  z 1 mm  (pixel 481,228)  -> press g
+IK ok (1.2 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    -18  y   -154  z     41 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    -17  y   -155  z     42 mm   -> off by x +1 y -1 z +1 mm
+  joint sag before correction (deg): [-0.6  2.8 -0.  -0.7  0. ]  [pan lift elbow wrist roll]
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+point x 199  y -26  z -3 mm  (pixel 227,293)  -> press g
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+point x 309  y -28  z -1 mm  (pixel 111,261)  -> press g
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    309  y    -28  z     39 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    310  y    -26  z     39 mm   -> off by x +1 y +2 z -0 mm
+  joint sag before correction (deg): [0.3 0.3 2.3 0.4 0. ]  [pan lift elbow wrist roll]
+point x 119  y -38  z -1 mm  (pixel 310,303)  -> press g
+IK ok (0.3 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    119  y    -38  z     39 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    119  y    -37  z     39 mm   -> off by x -1 y +0 z -0 mm
+  joint sag before correction (deg): [-0.5  1.2  0.1 -0.6  0. ]  [pan lift elbow wrist roll]
+
+=== 2026-11-21 17:59:00  aiming fixed-jaw tip, T_base_cam translation (mm) [ 221. -196.  563.], XY correction (mm) [0. 0.] ===
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+point x 368  y -165  z 0 mm  (pixel 79,96)  -> SPACE to go
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+point x 297  y 108  z -6 mm  (pixel 92,394)  -> SPACE to go
+point x 249  y 114  z -6 mm  (pixel 140,410)  -> SPACE to go
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    249  y    114  z     34 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    249  y    115  z     33 mm   -> off by x -0 y +1 z -0 mm
+  joint sag before correction (deg): [0.6 0.2 2.  0.5 0. ]  [pan lift elbow wrist roll]
+point x 205  y -35  z 24 mm  (pixel 222,291)  -> SPACE to go
+IK ok (0.2 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    205  y    -35  z     64 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    204  y    -34  z     64 mm   -> off by x -1 y +0 z -1 mm
+  joint sag before correction (deg): [-0.3  2.7 -0.1 -0.5  0. ]  [pan lift elbow wrist roll]
+IK ok (0.2 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+point x -195  y -129  z -44 mm  (pixel 606,286)  -> SPACE to go
+--- arrived (move) ---
+  target               x    205  y    -35  z     64 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    203  y    -34  z     62 mm   -> off by x -1 y +1 z -2 mm
+  joint sag before correction (deg): [-0.1  0.9  0.1  0.1  0. ]  [pan lift elbow wrist roll]
+out of reach (IK error 176 mm): pick a point 180-300 mm from the base
+point x -159  y -191  z -293 mm  (pixel 504,193)  -> SPACE to go
+out of reach (IK error 668 mm): pick a point 180-300 mm from the base
+point x 3  y -92  z -1 mm  (pixel 439,282)  -> SPACE to go
+IK ok (2.7 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x      3  y    -92  z     39 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x      6  y    -92  z     39 mm   -> off by x +3 y -0 z -0 mm
+  joint sag before correction (deg): [-0.4  1.   0.1  0.3  0. ]  [pan lift elbow wrist roll]
+point x -29  y -190  z -0 mm  (pixel 503,196)  -> SPACE to go
+IK ok (0.2 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+no depth at that pixel: click a little to the side
+--- arrived (move) ---
+  target               x    -29  y   -190  z     40 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    -29  y   -189  z     39 mm   -> off by x -0 y +0 z -1 mm
+  joint sag before correction (deg): [0.1 0.3 2.  0.5 0. ]  [pan lift elbow wrist roll]
+point x 5  y 113  z -1 mm  (pixel 373,464)  -> SPACE to go
+IK ok (0.2 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x      5  y    113  z     39 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x      8  y    113  z     39 mm   -> off by x +3 y +0 z +0 mm
+  joint sag before correction (deg): [27.   1.9 -0.  -0.8  0. ]  [pan lift elbow wrist roll]
+point x 86  y 26  z -3 mm  (pixel 323,370)  -> SPACE to go
+IK ok (0.2 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x     86  y     26  z     37 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x     92  y     29  z     38 mm   -> off by x +6 y +3 z +1 mm
+  joint sag before correction (deg): [-0.7  0.1 -1.7 -2.2  0.1]  [pan lift elbow wrist roll]
+no depth at that pixel: click a little to the side
+point x 246  y 24  z 0 mm  (pixel 165,330)  -> SPACE to go
+IK ok (0.2 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    246  y     24  z     40 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    247  y     24  z     40 mm   -> off by x +2 y -0 z +0 mm
+  joint sag before correction (deg): [-0.5  0.2  2.3  0.6  0.2]  [pan lift elbow wrist roll]
+point x -20  y -157  z 1 mm  (pixel 483,226)  -> SPACE to go
+IK ok (1.6 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+point x 237  y 17  z -1 mm  (pixel 176,325)  -> SPACE to go
+--- arrived (move) ---
+  target               x    -20  y   -157  z     41 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    -18  y   -157  z     41 mm   -> off by x +1 y -0 z -1 mm
+  joint sag before correction (deg): [-0.4  0.2  1.7 -0.5 -0.1]  [pan lift elbow wrist roll]
+IK ok (0.2 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    237  y     17  z     39 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    237  y     17  z     39 mm   -> off by x +0 y -0 z -0 mm
+  joint sag before correction (deg): [ 0.4  2.7  0.1  0.5 -0.1]  [pan lift elbow wrist roll]
+point x 315  y -91  z 14 mm  (pixel 117,197)  -> SPACE to go
+IK ok (0.3 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    315  y    -91  z     54 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    314  y    -92  z     52 mm   -> off by x -1 y -1 z -2 mm
+  joint sag before correction (deg): [-0.4  0.4  2.  -0.4 -0.1]  [pan lift elbow wrist roll]
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+point x 298  y 112  z -6 mm  (pixel 90,397)  -> SPACE to go
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    298  y    112  z     34 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    298  y    113  z     35 mm   -> off by x +0 y +1 z +1 mm
+  joint sag before correction (deg): [ 0.7  4.1 -0.   0.5 -0. ]  [pan lift elbow wrist roll]
+point x 121  y -31  z -2 mm  (pixel 306,308)  -> SPACE to go
+IK ok (0.3 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    121  y    -31  z     38 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    121  y    -31  z     38 mm   -> off by x -0 y +0 z +0 mm
+  joint sag before correction (deg): [-0.4  1.3 -0.  -0.7 -0. ]  [pan lift elbow wrist roll]
+point x 281  y 82  z -6 mm  (pixel 115,374)  -> SPACE to go
+point x 238  y 70  z -3 mm  (pixel 161,374)  -> SPACE to go
+IK ok (0.2 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    238  y     70  z     37 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    239  y     71  z     37 mm   -> off by x +0 y +1 z -0 mm
+  joint sag before correction (deg): [ 0.6  0.1  2.1  0.7 -0. ]  [pan lift elbow wrist roll]
+point x 193  y -98  z 52 mm  (pixel 253,235)  -> SPACE to go
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    193  y    -98  z     92 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    193  y    -97  z     93 mm   -> off by x -0 y +0 z +1 mm
+  joint sag before correction (deg): [-0.4  2.5  2.1 -0.7 -0. ]  [pan lift elbow wrist roll]
+point x -19  y -156  z 1 mm  (pixel 482,226)  -> SPACE to go
+IK ok (0.8 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    -19  y   -156  z     41 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    -18  y   -156  z     40 mm   -> off by x +1 y +0 z -1 mm
+  joint sag before correction (deg): [-0.6  0.2  1.6 -0.3 -0. ]  [pan lift elbow wrist roll]
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+no depth at that pixel: click a little to the side
+point x 189  y -31  z 24 mm  (pixel 238,299)  -> SPACE to go
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    189  y    -31  z     64 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    188  y    -31  z     64 mm   -> off by x -1 y +0 z -0 mm
+  joint sag before correction (deg): [ 0.3  2.4  0.1 -0.8 -0. ]  [pan lift elbow wrist roll]
+
+=== 2026-11-21 19:50:39  aiming fixed-jaw tip, T_base_cam translation (mm) [ 221. -196.  563.], XY correction (mm) [0. 0.] ===
+point x 121  y -227  z 20 mm  (pixel 372,111)  -> SPACE to go
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    121  y   -227  z     60 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    121  y   -227  z     59 mm   -> off by x -0 y -0 z -1 mm
+  joint sag before correction (deg): [-0.4  3.3  2.1  0.5  0. ]  [pan lift elbow wrist roll]
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    121  y   -227  z     60 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    121  y   -225  z     55 mm   -> off by x -0 y +2 z -4 mm
+  joint sag before correction (deg): [-0.   1.1  0.2 -0.   0. ]  [pan lift elbow wrist roll]
+
+=== 2026-11-21 19:53:03  aiming fixed-jaw tip, T_base_cam translation (mm) [290. -78. 656.], XY correction (mm) [0. 0.] ===
+point x 384  y -166  z -3 mm  (pixel 245,56)  -> SPACE to go
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    384  y   -166  z     37 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    384  y   -166  z     36 mm   -> off by x +0 y +0 z -1 mm
+  joint sag before correction (deg): [0.3 0.4 2.4 0.9 0.6]  [pan lift elbow wrist roll]
+point x 394  y 122  z -6 mm  (pixel 119,294)  -> SPACE to go
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    394  y    122  z     34 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    393  y    122  z     32 mm   -> off by x -2 y +1 z -2 mm
+  joint sag before correction (deg): [ 0.5  3.7 -0.1 -0.6  0. ]  [pan lift elbow wrist roll]
+point x 118  y -138  z -5 mm  (pixel 453,196)  -> SPACE to go
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    118  y   -138  z     35 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    118  y   -138  z     35 mm   -> off by x -0 y -1 z +0 mm
+  joint sag before correction (deg): [-0.5  2.6 -0.  -0.6 -0. ]  [pan lift elbow wrist roll]
+point x -12  y 127  z -3 mm  (pixel 443,455)  -> SPACE to go
+IK ok (4.0 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    -12  y    127  z     37 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x     -8  y    129  z     37 mm   -> off by x +4 y +2 z +0 mm
+  joint sag before correction (deg): [ 0.6  1.7 -0.   0.4 -0. ]  [pan lift elbow wrist roll]
+point x 316  y -3  z -9 mm  (pixel 235,224)  -> SPACE to go
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    316  y     -3  z     31 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    317  y     -3  z     31 mm   -> off by x +1 y -0 z -1 mm
+  joint sag before correction (deg): [-0.5  0.4  2.3 -0.6 -0. ]  [pan lift elbow wrist roll]
+point x 315  y -47  z -9 mm  (pixel 254,188)  -> SPACE to go
+point x 240  y -141  z -4 mm  (pixel 356,142)  -> SPACE to go
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    240  y   -141  z     36 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    238  y   -141  z     35 mm   -> off by x -2 y -0 z -1 mm
+  joint sag before correction (deg): [-0.6  3.4 -0.1  0.5 -0. ]  [pan lift elbow wrist roll]
+point x 131  y -1  z -4 mm  (pixel 385,301)  -> SPACE to go
+IK ok (0.3 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    131  y     -1  z     36 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    131  y     -1  z     36 mm   -> off by x -0 y +0 z -0 mm
+  joint sag before correction (deg): [ 0.6  1.  -0.1 -0.6 -0. ]  [pan lift elbow wrist roll]
+point x 388  y -32  z -3 mm  (pixel 185,170)  -> SPACE to go
+out of reach (IK error 4 mm): pick a point 180-300 mm from the base
+out of reach (IK error 4 mm): pick a point 180-300 mm from the base
+point x -460  y -2  z -459 mm  (pixel 617,386)  -> SPACE to go
+out of reach (IK error 907 mm): pick a point 180-300 mm from the base
+point x -19  y -156  z -1 mm  (pixel 570,238)  -> SPACE to go
+IK ok (1.3 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    -19  y   -156  z     39 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    -18  y   -156  z     39 mm   -> off by x +1 y -0 z -1 mm
+  joint sag before correction (deg): [-0.4  0.2  1.7 -0.4 -0. ]  [pan lift elbow wrist roll]
+point x 391  y 118  z -4 mm  (pixel 123,293)  -> SPACE to go
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    391  y    118  z     36 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    390  y    119  z     33 mm   -> off by x -1 y +1 z -2 mm
+  joint sag before correction (deg): [ 0.5  0.5  2.2  1.  -0. ]  [pan lift elbow wrist roll]
+point x 428  y -10  z -7 mm  (pixel 143,171)  -> SPACE to go
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    428  y    -10  z     33 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    428  y    -13  z     31 mm   -> off by x -0 y -2 z -2 mm
+  joint sag before correction (deg): [-0.6  0.4  2.3  1.  -0. ]  [pan lift elbow wrist roll]
+point x 70  y -34  z -4 mm  (pixel 447,299)  -> SPACE to go
+IK ok (3.8 mm). Press y to move the fixed-jaw tip 4 cm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x     70  y    -34  z     36 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x     80  y    -45  z     38 mm   -> off by x +10 y -11 z +2 mm
+  joint sag before correction (deg): [-0.4  0.4 -2.8 -3.9 -0. ]  [pan lift elbow wrist roll]
+
+=== 2026-11-21 20:39:26  aiming fixed-jaw tip, T_base_cam translation (mm) [290. -78. 656.], XY correction (mm) [0. 0.] ===
+point x 371  y -169  z -3 mm  (pixel 257,60)  -> SPACE to go
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 40 mm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    371  y   -169  z     37 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    371  y   -170  z     37 mm   -> off by x -0 y -2 z -0 mm
+  joint sag before correction (deg): [-0.5  0.3  2.3  1.  -0.4]  [pan lift elbow wrist roll]
+point x 345  y 96  z 20 mm  (pixel 166,298)  -> SPACE to go
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 40 mm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    345  y     96  z     60 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    344  y     97  z     59 mm   -> off by x -1 y +2 z -1 mm
+  joint sag before correction (deg): [ 0.8  0.5  2.3 -0.4  0. ]  [pan lift elbow wrist roll]
+point x 279  y -79  z 12 mm  (pixel 297,177)  -> SPACE to go
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 40 mm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    279  y    -79  z     52 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    279  y    -79  z     52 mm   -> off by x +0 y -1 z +0 mm
+  joint sag before correction (deg): [-0.4  3.8 -0.   0.5  0. ]  [pan lift elbow wrist roll]
+point x 380  y -175  z -3 mm  (pixel 252,50)  -> SPACE to go
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 40 mm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    380  y   -175  z     37 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    379  y   -175  z     32 mm   -> off by x -1 y +1 z -4 mm
+  joint sag before correction (deg): [-0.4  0.5  0.2  0.7  0. ]  [pan lift elbow wrist roll]
+point x 388  y -24  z -4 mm  (pixel 182,177)  -> SPACE to go
+out of reach (IK error 4 mm): pick a point 180-300 mm from the base
+out of reach (IK error 4 mm): pick a point 180-300 mm from the base
+out of reach (IK error 4 mm): pick a point 180-300 mm from the base
+out of reach (IK error 4 mm): pick a point 180-300 mm from the base
+out of reach (IK error 4 mm): pick a point 180-300 mm from the base
+point x 288  y -41  z -8 mm  (pixel 274,205)  -> SPACE to go
+IK ok (0.1 mm). Press y to move the fixed-jaw tip 40 mm above the point, n to cancel
+moving...
+--- arrived (move) ---
+  target               x    288  y    -41  z     32 mm   (nudge so far x +0 y +0 mm)
+  fixed-jaw tip (servos)  x    287  y    -40  z     32 mm   -> off by x -0 y +0 z -0 mm
+  joint sag before correction (deg): [ 0.6  3.8 -0.1 -0.2  0. ]  [pan lift elbow wrist roll]

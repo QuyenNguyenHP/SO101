@@ -1,0 +1,8 @@
+{
+ "shoulder_pan": 0.0,
+ "shoulder_lift": 3.59,
+ "elbow_flex": 3.25,
+ "wrist_flex": 2.69,
+ "wrist_roll": 0.0,
+ "note": "deg; sim angle = real reading - offset. Written by table_calib.py"
+}

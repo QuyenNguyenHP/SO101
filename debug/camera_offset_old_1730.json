@@ -1,0 +1,5 @@
+{
+ "dx_mm": 2.0,
+ "dy_mm": 22.0,
+ "note": "added to every camera point (robot base frame); set by verify_click.py"
+}

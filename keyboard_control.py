@@ -25,10 +25,10 @@ import mujoco
 import mujoco.viewer
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from so101_real import RealArm, SCENE, RATE, G_LO, G_HI, real_limits_sim   # noqa: E402
+from so101_real import RealArm, SCENE, RATE, G_LO, G_HI, real_limits_sim, HOME   # noqa: E402
 
 SITE = 'gripperframe'            # the fingertip point in so101.xml
-HOME = np.radians([0, -20, 30, 40, 0])
+# HOME (sim rad) comes from so101_real: home_pose.json if recorded (record_home.py), else the default
 STEPS_MM = {'1': 2, '2': 5, '3': 10}
 Z_MIN = 0.01                     # never put the tip lower than 1 cm above the table
 REACH_TOL = 0.003                # IK must land within 3 mm, else the move is refused
@@ -51,27 +51,35 @@ def pitch_of(axis):
 
 def ik(model, d, q, target, pitch_deg, lock_pitch, lo, hi, iters=60, damping=0.01):
     '''Move joints 0-3 so the tip reaches `target` (and the tilt `pitch_deg` if locked).
-    Joint 4 (wrist roll) and the gripper are left as they are. Returns (q, position error).'''
-    q = q.copy()
+    Joint 4 (wrist roll) and the gripper are left as they are. Returns (q, position error).
+    Damped least squares; arrays are allocated once (this runs thousands of times per plan).'''
+    q = np.array(q, dtype=float)
     sid = model.site(SITE).id
     jacp, jacr = np.zeros((3, model.nv)), np.zeros((3, model.nv))
     az_target = -np.sin(np.radians(pitch_deg))
+    n = 4 if lock_pitch else 3
+    J = np.zeros((n, 4))
+    err = np.zeros(n)
+    reg = damping ** 2 * np.eye(n)
+    lo4, hi4 = lo[:4], hi[:4]
+    site_pos, site_mat = d.site_xpos[sid], d.site_xmat[sid]
     for _ in range(iters):
-        pos, axis = tcp(model, d, q)
+        d.qpos[:5] = q[:5]
+        mujoco.mj_kinematics(model, d)
         mujoco.mj_comPos(model, d)
         mujoco.mj_jacSite(model, d, jacp, jacr, sid)
-        err = target - pos
-        J = jacp[:, :4]
+        err[:3] = target - site_pos
+        J[:3] = jacp[:, :4]
         if lock_pitch:                          # 4th row: z-component of the approach axis
-            dz = np.array([np.cross(jacr[:, i], axis)[2] for i in range(4)])
-            J = np.vstack([J, 0.1 * dz])        # 0.1: 1 rad of tilt "costs" like 10 cm
-            err = np.append(err, 0.1 * (az_target - axis[2]))
-        if np.linalg.norm(err[:3]) < 1e-4 and (not lock_pitch or abs(err[3]) < 1e-4):
+            ax0, ax1, ax2 = site_mat[0], site_mat[3], site_mat[6]    # approach axis = 1st column
+            J[3] = 0.1 * (jacr[0, :4] * ax1 - jacr[1, :4] * ax0)    # z of cross(jacr_i, axis); 0.1: 1 rad ~ 10 cm
+            err[3] = 0.1 * (az_target - ax2)
+        if err[0] ** 2 + err[1] ** 2 + err[2] ** 2 < 1e-8 and (not lock_pitch or abs(err[3]) < 1e-4):
             break
-        dq = J.T @ np.linalg.solve(J @ J.T + damping**2 * np.eye(len(err)), err)
-        q[:4] = np.clip(q[:4] + dq, lo[:4], hi[:4])
+        dq = J.T @ np.linalg.solve(J @ J.T + reg, err)
+        q[:4] = np.minimum(np.maximum(q[:4] + dq, lo4), hi4)
     pos, _ = tcp(model, d, q)
-    return q, np.linalg.norm(target - pos)
+    return q, float(np.linalg.norm(target - pos))
 
 
 # ---------------- keyboard (terminal, non-blocking) ----------------

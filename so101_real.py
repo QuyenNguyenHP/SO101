@@ -18,11 +18,34 @@ CALIB = os.path.expanduser(
 JOINTS = ['shoulder_pan', 'shoulder_lift', 'elbow_flex', 'wrist_flex', 'wrist_roll']
 RATE = 30                         # commands per second
 
-# Checked with real_twin.py: sim and real agree
+# Checked with real_twin.py: sim and real agree (by eye, a few degrees)
 SIGN = np.array([1, 1, 1, 1, 1])
 OFFSET = np.zeros(5)
+# Fine joint offsets (deg) measured by table_calib.py: sim angle = real reading - OFFSET
+OFFSETS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'joint_offsets.json')
+if os.path.exists(OFFSETS_FILE):
+    try:
+        _o = json.load(open(OFFSETS_FILE))
+        OFFSET = np.array([_o.get(j, 0.0) for j in
+                           ['shoulder_pan', 'shoulder_lift', 'elbow_flex', 'wrist_flex', 'wrist_roll']], float)
+    except (ValueError, OSError):
+        print('WARNING: joint_offsets.json unreadable, using zero offsets')
 G_LO, G_HI = -0.17453, 1.74533    # sim gripper range (rad) <-> LeRobot 0..100
+# Home pose: recorded with record_home.py (home_pose.json, real servo degrees), else this default
+HOME_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'home_pose.json')
+HOME_DEFAULT = np.radians([0, -20, 30, 40, 0])
 MARGIN = 3.0                      # degrees kept away from the calibrated ends
+
+
+def configure(port=None, robot_id=None):
+    '''Use another serial port / calibration id (call before creating RealArm).'''
+    global PORT, ROBOT_ID, CALIB
+    if port:
+        PORT = port
+    if robot_id:
+        ROBOT_ID = robot_id
+        CALIB = os.path.expanduser(
+            f'~/.cache/huggingface/lerobot/calibration/robots/so_follower/{ROBOT_ID}.json')
 
 
 def sim_to_real(rad):
@@ -31,6 +54,18 @@ def sim_to_real(rad):
 
 def real_to_sim(deg):
     return np.radians(SIGN * (np.asarray(deg) - OFFSET))
+
+
+def load_home():
+    '''Home pose (sim rad, 5 joints). Stored as REAL servo degrees, so it stays the same physical
+    pose if joint_offsets.json changes later.'''
+    if os.path.exists(HOME_FILE):
+        try:
+            h = json.load(open(HOME_FILE))
+            return real_to_sim(np.array([h['real_deg'][j] for j in JOINTS], float))
+        except (ValueError, OSError, KeyError):
+            print('WARNING: home_pose.json unreadable, using the default home')
+    return HOME_DEFAULT.copy()
 
 
 def sim_gripper_to_real(rad):
@@ -109,6 +144,26 @@ class RealArm:
         action['gripper.pos'] = float(self.last_grip)
         self.robot.send_action(action)
 
+    def correct_sag(self, q, iters=3, wait=0.4, tol_deg=0.3):
+        '''Arm is at (or near) q but sags under gravity: servos stop a degree or two short.
+        Re-aim each joint by its remaining error, a few times. Returns the final error (deg, 5).'''
+        import time
+        target = np.clip(sim_to_real(q[:5]), self.lo, self.hi)
+        aim = target.copy()
+        err = np.zeros(5)
+        for _ in range(iters):
+            time.sleep(wait)
+            real, _ = self.read_real()
+            err = target - real
+            if np.abs(err).max() < tol_deg:
+                break
+            aim = np.clip(aim + np.clip(err, -3, 3), self.lo, self.hi)   # never more than 3 deg per step
+            self.last_deg = aim
+            action = {f'{j}.pos': float(v) for j, v in zip(JOINTS, aim)}
+            action['gripper.pos'] = float(self.last_grip)
+            self.robot.send_action(action)
+        return err
+
     def close(self):
         if not self.dry:
             try:
@@ -116,3 +171,6 @@ class RealArm:
             except (KeyboardInterrupt, EOFError):
                 pass
         self.robot.disconnect()
+
+
+HOME = load_home()
