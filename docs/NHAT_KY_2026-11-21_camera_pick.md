@@ -17,9 +17,9 @@
 - Mỗi lần gắp đều được **chạy thử trong mô phỏng vật lý MuJoCo** trước. Mô phỏng không đạt thì tay thật không chạy.
 - Lập kế hoạch nhanh (0,1–0,6 giây) và **chạy nền ngay khi click chỗ đặt**, nên nhấn SPACE là tay chạy luôn.
 - Các script phụ trợ được viết trong ngày:
-  - `goto.py`: đưa tay gắp tới một điểm 3D bất kỳ;
-  - `detector.py`: nhận diện nhiều vật;
-  - `record_home.py`: ghi tư thế home bằng cách cầm tay đưa tới.
+  - `Reference/goto.py`: đưa tay gắp tới một điểm 3D bất kỳ;
+  - `Reference/detector.py`: nhận diện nhiều vật;
+  - `Reference/record_home.py`: ghi tư thế home bằng cách cầm tay đưa tới.
 
 ---
 
@@ -77,11 +77,11 @@ p_cam = (X, Y, z)            ->   p_đế = T_base_cam * p_cam
 ### 4.3 Hiệu chuẩn bàn (`table_calib.py`)
 
 - Chạm đầu hàm kẹp cố định vào các dấu X trên bàn, rồi click lại đúng các dấu X đó trên ảnh độ sâu.
-- Bộ giải tìm cùng lúc **`T_base_cam`**, **độ lệch nhỏ của 3 khớp** (`joint_offsets.json`), **độ cao mặt bàn** và **hệ số tỉ lệ độ sâu**.
+- Bộ giải tìm cùng lúc **`T_base_cam`**, **độ lệch nhỏ của 3 khớp** (`json/joint_offsets.json`), **độ cao mặt bàn** và **hệ số tỉ lệ độ sâu**.
 - Kết quả hiện tại:
   - 7 điểm, sai số trung bình **5,3 mm**, hệ số tỉ lệ độ sâu 1,003;
   - độ lệch khớp: shoulder_lift −0,2°, elbow_flex 6,58°, wrist_flex 4,83°.
-- `verify_click.py` dùng để kiểm tra: click một điểm, tay đi tới ngay phía trên điểm đó.
+- `Reference/verify_click.py` dùng để kiểm tra: click một điểm, tay đi tới ngay phía trên điểm đó.
 
 ---
 
@@ -254,7 +254,7 @@ Mọi đoạn đều dùng đường cong **min-jerk bậc 5** để chuyển đ
   - kẹp trong giới hạn khớp;
   - giới hạn tốc độ mỗi lệnh.
 - Nhấn **`s`** để dừng ngay; tay giữ nguyên tư thế.
-- Kết thúc bằng việc về **home**. Home ghi bằng `record_home.py`, lưu theo độ servo thật trong `home_pose.json`.
+- Kết thúc bằng việc về **home**. Home ghi bằng `Reference/record_home.py`, lưu theo độ servo thật trong `json/home_pose.json`.
 
 ---
 
@@ -276,7 +276,7 @@ Vật ở chỗ khó (sát đế, bên cạnh) vẫn có thể mất 1–4 giây
 | # | Việc | Ghi chú |
 |---|---|---|
 | 1 | Đổi tên hướng dẫn camera thành `SETUP_TABLE_2D_CALIB.md` | Sửa mọi chỗ nhắc tới tên cũ |
-| 2 | Viết `camera_pick.py` và `goto.py`; thêm phím `+`/`-` vào `verify_click.py` | Đo vật bằng độ sâu, kiểm tra mô phỏng trước khi chạy |
+| 2 | Viết `camera_pick.py` và `Reference/goto.py`; thêm phím `+`/`-` vào `Reference/verify_click.py` | Đo vật bằng độ sâu, kiểm tra mô phỏng trước khi chạy |
 | 3 | Tuỳ chọn `--lower` (kẹp thấp hơn 20 mm) | Chặn an toàn để ngón cách bàn ít nhất 4 mm |
 | 4 | Sửa lỗi "Cannot move straight up" khi vật gần đế | Đổi góc chúi từ từ; tự thử lại với mức kẹp cao hơn; giữ vật đã chọn khi thất bại |
 | 5 | Tăng tốc: mặc định 1.0, tối đa 2.0 | Tìm và sửa lỗi **khớp nhảy 15°** do chọn sai nghiệm khuỷu tay |
@@ -284,7 +284,7 @@ Vật ở chỗ khó (sát đế, bên cạnh) vẫn có thể mất 1–4 giây
 | 7 | Nhận diện nhiều vật: thử YOLO-World, chuyển sang **độ sâu + CLIP** | Che tay robot bằng mô hình 3D; sửa lỗi crash khi thoát (luồng PyTorch) |
 | 8 | Tối ưu thời gian lập kế hoạch | IK nhanh khoảng 4 lần, lập kế hoạch chạy nền |
 | 9 | Robot đặt vật cách đế 84 mm rồi không gắp lại được | Đường nhấc "lùi ra xa đế"; thông báo rõ hơn; cảnh báo khi đặt sát đế |
-| 10 | `record_home.py` | Ghi home bằng cách cầm tay đưa tới; mọi script dùng chung |
+| 10 | `Reference/record_home.py` | Ghi home bằng cách cầm tay đưa tới; mọi script dùng chung |
 
 ---
 
@@ -299,14 +299,14 @@ python camera_pick.py --detect "green cube, white cube, tape measure, black cyli
 python camera_pick.py --dry                       # tay giả: chỉ camera, đo vật, mô phỏng
 python camera_pick.py --speed 1.5 --lower 20      # nhanh hơn, kẹp thấp 20 mm
 
-python goto.py 250 0 80                           # đưa tâm kẹp tới điểm 3D (mm)
-python record_home.py                             # ghi tư thế home
-python detector.py "green cube, tape measure"     # thử nhận diện trên 1 ảnh -> debug/detect.jpg
+python Reference/goto.py 250 0 80                           # đưa tâm kẹp tới điểm 3D (mm)
+python Reference/record_home.py                             # ghi tư thế home
+python Reference/detector.py "green cube, tape measure"     # thử nhận diện trên 1 ảnh -> debug/detect.jpg
 ```
 
 ### 13.1 Hiệu chuẩn bàn nhanh bằng `table_calib.py`
 
-Dùng khi mới lắp camera, sau khi di chuyển camera/đế robot, hoặc sau khi hiệu chuẩn lại servo. Trước đó, servo phải được hiệu chuẩn với id `my_follower` theo [SETUP_ROBOT.md](../SETUP_ROBOT.md). Cố định camera và đế robot trong suốt quá trình thu điểm và gắp vật.
+Dùng khi mới lắp camera, sau khi di chuyển camera/đế robot, hoặc sau khi hiệu chuẩn lại servo. Trước đó, servo phải được hiệu chuẩn với id `my_follower` theo [SETUP_ROBOT.md](SETUP_ROBOT.md). Cố định camera và đế robot trong suốt quá trình thu điểm và gắp vật.
 
 **Chuẩn bị và chạy:** đánh dấu **6–10 dấu X** rải đều trên vùng làm việc, cách đế khoảng **180–320 mm**, tránh xếp tất cả trên một đường thẳng. Đóng các chương trình đang dùng camera hoặc cổng serial.
 
@@ -319,13 +319,13 @@ python table_calib.py
 
 1. **Đỡ tay robot trước khi nhấn Enter** ở terminal: script sẽ tắt torque để có thể di chuyển tay bằng tay.
 2. Click vào cửa sổ ảnh để cửa sổ nhận phím. Đặt **đầu tận cùng của hàm kẹp cố định** (hàm không chuyển động khi đóng/mở kẹp) chạm nhẹ mặt bàn, đúng tâm một dấu X. Giữ yên rồi nhấn **SPACE**; script lấy trung bình 10 lần đọc servo. Nếu báo tay đã chuyển động, giữ yên và nhấn lại.
-3. Đưa tay ra khỏi dấu X để camera nhìn rõ, rồi **click trái đúng tâm dấu X vừa chạm**. Khi hiện `pair N saved`, cặp điểm đã được lưu vào `table_points.json`; dấu đã thu hiện màu xanh kèm số. Có thể click trước rồi chạm sau, nhưng phải là cùng một dấu X.
+3. Đưa tay ra khỏi dấu X để camera nhìn rõ, rồi **click trái đúng tâm dấu X vừa chạm**. Khi hiện `pair N saved`, cặp điểm đã được lưu vào `json/table_points.json`; dấu đã thu hiện màu xanh kèm số. Có thể click trước rồi chạm sau, nhưng phải là cùng một dấu X.
 4. Lặp lại với các dấu khác. Nhấn **u** để xoá cặp đang thu dở; nếu không có cặp dở thì xoá cặp đã lưu cuối cùng. Nếu báo `REJECTED`, thu lại dấu đó; nếu báo `no depth there`, click hơi lệch sang vùng có độ sâu ngay cạnh tâm dấu.
 5. Có ít nhất **6 cặp**, nhấn **c** để tính và lưu. Đọc kết quả ở **terminal**: sai số XY dự đoán từng điểm từ các điểm còn lại (leave-one-out) trung bình **< 4 mm = GOOD**, **< 8 mm = usable**. Nếu sai số lớn, kiểm tra các điểm bị đánh dấu và thu lại/thêm điểm rải rộng hơn. Nếu script báo thay đổi offset vượt **12°**, nó không lưu kết quả mới; cần hiệu chuẩn lại servo rồi thu lại điểm.
 6. Nhấn **q** để thoát, tiếp tục đỡ tay khi script yêu cầu tắt torque. Sau đó kiểm tra bằng lệnh bên dưới.
 
 ```bash
-python verify_click.py
+python Reference/verify_click.py
 ```
 
 Click một dấu X, nhấn **g** để lập kế hoạch rồi **y** để cho tay di chuyển: đầu hàm cố định tới phía trên dấu, mặc định cách điểm đó **4 cm**. Kiểm tra nhiều vị trí, kể cả dấu chưa dùng để hiệu chuẩn; nhấn **q** để thoát. Trong cửa sổ này, **SPACE chạy ngay không hỏi**, còn **+ / -** đổi độ cao và có thể làm tay di chuyển lại.
@@ -339,9 +339,9 @@ python table_calib.py --solve-only  # tính và ghi lại kết quả từ JSON,
 python table_calib.py --port /dev/ttyACM1 --robot-id my_follower
 ```
 
-Chạy không có `--resume` bắt đầu bộ điểm mới; khi lưu cặp đầu tiên, `table_points.json` cũ sẽ bị ghi đè. Chỉ tiếp tục bộ điểm cũ khi camera, đế robot, mặt bàn và hiệu chuẩn servo không thay đổi. `--dry` chỉ thử camera với tay giả, không dùng để hiệu chuẩn tay thật.
+Chạy không có `--resume` bắt đầu bộ điểm mới; khi lưu cặp đầu tiên, `json/table_points.json` cũ sẽ bị ghi đè. Chỉ tiếp tục bộ điểm cũ khi camera, đế robot, mặt bàn và hiệu chuẩn servo không thay đổi. `--dry` chỉ thử camera với tay giả, không dùng để hiệu chuẩn tay thật.
 
-**File kết quả:** `table_points.json` lưu các cặp đo; nhấn **c** ghi `T_base_cam.npy`, `T_base_cam.json` và `joint_offsets.json`. Khởi động lại các script điều khiển sau khi lưu để nạp hiệu chuẩn mới. Hướng dẫn đầy đủ: [SETUP_TABLE_2D_CALIB.md](../SETUP_TABLE_2D_CALIB.md).
+**File kết quả:** `json/table_points.json` lưu các cặp đo; nhấn **c** ghi `T_base_cam.npy`, `json/T_base_cam.json` và `json/joint_offsets.json`. Khởi động lại các script điều khiển sau khi lưu để nạp hiệu chuẩn mới. Hướng dẫn đầy đủ: [SETUP_TABLE_2D_CALIB.md](SETUP_TABLE_2D_CALIB.md).
 
 ### 13.2 Phím trong cửa sổ `camera_pick`
 
@@ -406,14 +406,14 @@ Chạy không có `--resume` bắt đầu bộ điểm mới; khi lưu cặp đ�
 | File | Nội dung |
 |---|---|
 | `camera_pick.py` | Chương trình chính: camera → đo vật → lập kế hoạch → mô phỏng → tay thật |
-| `detector.py` | Nhận diện nhiều vật: độ sâu + che tay robot + CLIP (hoặc YOLO-World) |
-| `pick_place.py` | Lập kế hoạch gắp và đặt, IK nâng cao, kiểm tra mô phỏng; chạy được không cần camera |
-| `keyboard_control.py` | Hàm IK dùng chung; điều khiển bằng bàn phím |
-| `so101_real.py` | Lớp `RealArm`: đổi góc mô phỏng ↔ servo, giới hạn, home, bù võng |
-| `goto.py` | Đưa tay gắp tới điểm 3D |
-| `record_home.py` | Ghi tư thế home |
-| `verify_click.py`, `table_calib.py` | Kiểm tra và hiệu chuẩn camera |
-| `T_base_cam.npy`, `joint_offsets.json`, `home_pose.json` | Kết quả hiệu chuẩn và home |
+| `Reference/detector.py` | Nhận diện nhiều vật: độ sâu + che tay robot + CLIP (hoặc YOLO-World) |
+| `Reference/pick_place.py` | Lập kế hoạch gắp và đặt, IK nâng cao, kiểm tra mô phỏng; chạy được không cần camera |
+| `Reference/keyboard_control.py` | Hàm IK dùng chung; điều khiển bằng bàn phím |
+| `Reference/so101_real.py` | Lớp `RealArm`: đổi góc mô phỏng ↔ servo, giới hạn, home, bù võng |
+| `Reference/goto.py` | Đưa tay gắp tới điểm 3D |
+| `Reference/record_home.py` | Ghi tư thế home |
+| `Reference/verify_click.py`, `table_calib.py` | Kiểm tra và hiệu chuẩn camera |
+| `T_base_cam.npy`, `json/joint_offsets.json`, `json/home_pose.json` | Kết quả hiệu chuẩn và home |
 | `models/yolov8s-worldv2.pt` | Trọng số YOLO-World |
 | `debug/camera_pick_log.txt` | Nhật ký mọi lần chạy |
 | `SETUP_TABLE_2D_CALIB.md`, `DEPLOY_REAL_SO101.md` | Hướng dẫn chi tiết |

@@ -15,7 +15,7 @@ In the camera window:
   2. click the PLACE spot on the table (red cross).
   3. SPACE: plan, check the whole pick in MuJoCo physics, then run it on the real arm.
   s  stop the arm now (holds the pose)     r  start over     h  home     q  quit
-Needs a good table calibration (T_base_cam.npy, see SETUP_TABLE_2D_CALIB.md).
+Needs a good table calibration (T_base_cam.npy, see docs/SETUP_TABLE_2D_CALIB.md).
 Objects: about 15-60 mm tall, 10-65 mm wide across the jaws, standing on the table.
 Everything is also written to debug/camera_pick_log.txt.
 '''
@@ -29,6 +29,7 @@ import cv2
 import mujoco
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(HERE, "Reference"))
 sys.path.insert(0, HERE)
 import so101_real                                                    # noqa: E402
 from keyboard_control import HOME                                    # noqa: E402
@@ -62,7 +63,7 @@ def cloud_from(z_raw, units, intr, T, offset):
     return P
 
 
-def measure(P, u, v, roi=None, robot=None):
+def measure(P, u, v, roi=None, robot=None, bgr=None):
     '''Object under pixel (u, v), or with roi=(x0, y0, x1, y1) (a detection box) the biggest
     raised blob inside that box. robot: image mask of the arm (never part of an object).
     Returns dict or an error string.'''
@@ -114,11 +115,49 @@ def measure(P, u, v, roi=None, robot=None):
             return f'nothing taller than {OBJ_MIN*1000:.0f} mm under the click (table z here {table*1000:.0f} mm)'
         j = np.argmin((ys - 12) ** 2 + (xs - 12) ** 2)
         k = lab[max(0, v - 12) + ys[j], max(0, u - 12) + xs[j]]
-    return describe(P, lab == k, table)
+    return describe(P, lab == k, table, bgr)
 
 
-def describe(P, blob, table):
-    '''Size, centre and yaw of one object (blob: image mask of its pixels, table: table z in m).'''
+def refine_yaw(bgr, P, blob, top, yaw):
+    '''Object yaw from the EDGES in the colour image. The depth outline of a small object is rounded
+    (a 30 mm cube gives a random minAreaRect angle), but its colour edges are sharp.
+    Every edge pixel around the object votes for its direction (mapped from pixels to the table
+    plane with an affine fit of the depth points); a box has two edge directions 90 deg apart.
+    Returns (yaw deg in -90..90 nearest the depth yaw, strength 0..1) or (None, strength) if unclear.'''
+    ys, xs = np.nonzero(top)
+    if len(xs) < 30:
+        return None, 0.0
+    pts = P[ys, xs]
+    A, *_ = np.linalg.lstsq(np.stack([xs, ys, np.ones_like(xs)], 1).astype(np.float64), pts[:, :2], rcond=None)
+    L = A[:2].T                                         # 2x2: pixel step -> table step (m)
+    y0, y1, x0, x1 = ys.min(), ys.max(), xs.min(), xs.max()
+    pad = 12
+    y0, x0 = max(0, y0 - pad), max(0, x0 - pad)
+    y1, x1 = min(bgr.shape[0], y1 + pad + 1), min(bgr.shape[1], x1 + pad + 1)
+    g = cv2.GaussianBlur(cv2.cvtColor(bgr[y0:y1, x0:x1], cv2.COLOR_BGR2GRAY).astype(np.float32), (3, 3), 0)
+    gx, gy = cv2.Sobel(g, cv2.CV_32F, 1, 0), cv2.Sobel(g, cv2.CV_32F, 0, 1)
+    band = cv2.dilate(blob[y0:y1, x0:x1].astype(np.uint8), np.ones((9, 9), np.uint8)).astype(bool)
+    mag = np.hypot(gx, gy) * band
+    keep = mag > max(20.0, np.percentile(mag[band], 70))
+    if keep.sum() < 20:
+        return None, 0.0
+    edge = np.stack([-gy[keep], gx[keep]], 1) @ L.T     # edge directions on the table
+    ang = np.degrees(np.arctan2(edge[:, 1], edge[:, 0])) % 90
+    hist, _ = np.histogram(ang, bins=45, range=(0, 90), weights=mag[keep])
+    hist = np.convolve(np.r_[hist[-2:], hist, hist[:2]], [1, 2, 3, 2, 1], 'valid')   # circular smoothing
+    k = int(hist.argmax())
+    strength = float(hist[k] / max(hist.sum(), 1e-9) * len(hist) / 9)   # ~0.1 flat, ~1 one clean square
+    if strength < 0.35:
+        return None, strength
+    peak = k * 2 + 1.0
+    cands = [((peak + 90 * i + 90) % 180) - 90 for i in range(2)]
+    best = min(cands, key=lambda c: abs((c - yaw + 90) % 180 - 90))
+    return float(best), strength
+
+
+def describe(P, blob, table, bgr=None):
+    '''Size, centre and yaw of one object (blob: image mask of its pixels, table: table z in m).
+    bgr: colour image: the yaw is then taken from the object's colour edges (sharper than depth).'''
     pts = P[blob]
     height = float(np.percentile(pts[:, 2], 95) - table)
     top = pts[pts[:, 2] - table > TOP_FRACTION * height]
@@ -130,9 +169,22 @@ def describe(P, blob, table):
     short, long_ = (e1, e2) if np.linalg.norm(e1) <= np.linalg.norm(e2) else (e2, e1)
     yaw = float(np.degrees(np.arctan2(short[1], short[0])))
     yaw = (yaw + 90) % 180 - 90                          # jaws work the same turned 180 deg
+    yaw_depth, strength = yaw, 0.0
+    if bgr is not None:
+        top_mask = blob & (P[..., 2] - table > TOP_FRACTION * height)
+        y2, strength = refine_yaw(bgr, P, blob, top_mask, yaw)
+        if y2 is not None:
+            yaw = y2
+            if np.linalg.norm(long_) < 1.25 * np.linalg.norm(short):    # square-ish: the depth side
+                a = np.radians(yaw)                                     # lengths are no help either
+                d = top[:, :2] - top[:, :2].mean(0)
+                w1, w2 = np.ptp(d @ [np.cos(a), np.sin(a)]), np.ptp(d @ [-np.sin(a), np.cos(a)])
+                if w2 < w1:                                             # jaws across the narrower side
+                    yaw = (yaw + 180) % 180 - 90
     centre = np.array(rect[0]) / 1000
     contours, _ = cv2.findContours(blob.astype(np.uint8), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    return {'centre': centre, 'height': height, 'width': float(np.linalg.norm(short)),
+    return {'centre': centre, 'height': height, 'width': float(np.linalg.norm(short)), 'yaw_depth': yaw_depth,
+            'yaw_edge': strength,
             'length': float(np.linalg.norm(long_)), 'yaw': yaw, 'table': table,
             'contour': max(contours, key=cv2.contourArea), 'n': int(blob.sum())}
 
@@ -176,8 +228,11 @@ def physics_check(plan, obj, place):
     for _ in range(so101_real.RATE * steps):
         mujoco.mj_step(model, data)
     end = data.qpos[adr:adr + 3]
-    miss = np.linalg.norm(end[:2] - place) * 1000
     lifted = (zmax - obj['height'] / 2) * 1000
+    if place is None:                                    # pick-only plan: must still hold it at the end
+        held = end[2] - obj['height'] / 2 > 0.04
+        return lifted > 40 and held, f'lifted {lifted:.0f} mm, {"still held" if held else "DROPPED"} at the end'
+    miss = np.linalg.norm(end[:2] - place) * 1000
     upright = abs(end[2] - obj['height'] / 2) < 0.006
     ok = lifted > 40 and miss < 20 and upright
     return ok, (f'lifted {lifted:.0f} mm, landed {miss:.0f} mm from the spot, '
@@ -200,7 +255,7 @@ def main():
     a = ap.parse_args()
     so101_real.configure(a.port, a.robot_id)
     if not os.path.exists(a.calib):
-        sys.exit(f'{a.calib} not found: run table_calib.py first (SETUP_TABLE_2D_CALIB.md).')
+        sys.exit(f'{a.calib} not found: run table_calib.py first (docs/SETUP_TABLE_2D_CALIB.md).')
     T, offset = np.load(a.calib), load_offset()
 
     import pyrealsense2 as rs
@@ -240,9 +295,9 @@ def main():
             out = []
             for dd in detector.detect(img, P, robot):
                 if dd['blob'] is not None:
-                    m = describe(P, dd['blob'], dd['table'])
+                    m = describe(P, dd['blob'], dd['table'], img)
                 else:
-                    m = measure(P, 0, 0, roi=dd['box'], robot=robot)
+                    m = measure(P, 0, 0, roi=dd['box'], robot=robot, bgr=img)
                 dd['meas'] = m if isinstance(m, dict) else None
                 dd['why'] = m if isinstance(m, str) else problem(m)
                 out.append(dd)
@@ -397,7 +452,7 @@ def main():
                 P = cloud_base(depth, intr, T, offset)
                 if st['obj'] is None:
                     r = measure(P, u, v, robot=robot_mask(model, d_click, arm.read_sim(), T, offset, intr,
-                                                          img.shape[:2]))
+                                                          img.shape[:2]), bgr=img)
                     if isinstance(r, str):
                         say(r)
                     else:

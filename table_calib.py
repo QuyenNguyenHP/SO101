@@ -14,7 +14,7 @@ Keys (click the image window first):
   q      quit
 Run:  python table_calib.py              (add --resume to keep table_points.json)
       python table_calib.py --solve-only (recompute from table_points.json, no camera/robot)
-Then: python verify_click.py
+Then: python Reference/verify_click.py
 '''
 import argparse
 import json
@@ -27,15 +27,16 @@ import cv2
 import mujoco
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(HERE, "Reference"))
 sys.path.insert(0, HERE)
 import so101_real                                              # noqa: E402
 from handeye_calib import open_camera                          # noqa: E402
 from verify_click import pixel_to_cam                          # noqa: E402
 
-POINTS = os.path.join(HERE, 'table_points.json')
+POINTS = os.path.join(HERE, 'json', 'table_points.json')
 RESULT = os.path.join(HERE, 'T_base_cam.npy')
-RESULT_JSON = os.path.join(HERE, 'T_base_cam.json')
-BACKUP = os.path.join(HERE, 'T_base_cam_handeye.npy')        # the marker result, kept once
+RESULT_JSON = os.path.join(HERE, 'json', 'T_base_cam.json')
+BACKUP = os.path.join(HERE, 'npy', 'T_base_cam_handeye.npy')        # the marker result, kept once
 JAW_TIP = 'fixed_jaw_sph_tip1'                                 # end of the fixed jaw in so101.xml
 MIN_POINTS = 6
 MATCH_TOL = 0.012          # m: robot and camera must agree on the distance between two marks
@@ -161,13 +162,14 @@ def compute(pairs):
     if use_joint:
         if np.abs(change).max() > MAX_OFFSET:
             print(f'NOT saving joint offsets: a change over {MAX_OFFSET:.0f} deg means the servo calibration '
-                  'itself is off. Redo lerobot-calibrate (SETUP_ROBOT.md), then this.')
+                  'itself is off. Redo lerobot-calibrate (docs/SETUP_ROBOT.md), then this.')
             return err
         json.dump({j: round(float(v), 2) for j, v in zip(so101_real.JOINTS, new_off)} |
                   {'note': 'deg; sim angle = real reading - offset. Written by table_calib.py'},
                   open(so101_real.OFFSETS_FILE, 'w'), indent=1)
         print('saved joint_offsets.json: every script (keyboard_control, verify_click, pick_place...) uses it')
     if os.path.exists(RESULT) and not os.path.exists(BACKUP):
+        os.makedirs(os.path.dirname(BACKUP), exist_ok=True)
         shutil.copy(RESULT, BACKUP)
     np.save(RESULT, T)
     json.dump({'method': 'table touch points' + (' + joint offsets' if use_joint else ''), 'T_base_cam': T.tolist(),

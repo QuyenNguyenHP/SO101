@@ -1764,3 +1764,54 @@ running (17 s at speed 1.0), s = stop
 > lift away
 > return home
 done. Click the next object
+
+=== 2026-11-23 22:34:34 ===
+object at x 258 y -13 mm: height 17, width 26, length 37 mm, yaw -36 deg (table z -7)
+place at x 185 y -97 mm: planning...  (SPACE to go)
+plan ready in 0.5 s, sim check OK: lifted 81 mm, landed 5 mm from the spot, upright  -> SPACE to go
+running (16 s at speed 1.0), s = stop
+> move above object
+> descend to object (grip centre 11 mm above the table)
+> close gripper
+> lift
+> carry
+> line up
+> lower
+> open gripper
+> lift away
+> return home
+done. Click the next object
+object at x 182 y -89 mm: height 22, width 23, length 36 mm, yaw 87 deg (table z -5)
+click the object, then the place spot, then SPACE
+place at x 224 y 71 mm: planning...  (SPACE to go)
+still planning... starts by itself when ready
+plan ready in 0.5 s, sim check OK: lifted 81 mm, landed 9 mm from the spot, upright
+running (17 s at speed 1.0), s = stop
+> move above object
+> descend to object (grip centre 10 mm above the table)
+> close gripper
+> lift
+> carry
+> line up
+> lower
+> open gripper
+> lift away
+> return home
+done. Click the next object
+object at x 221 y 66 mm: height 20, width 26, length 39 mm, yaw -57 deg (table z -6)
+place at x 214 y -131 mm: planning...  (SPACE to go)
+plan ready in 0.4 s, sim check OK: lifted 80 mm, landed 7 mm from the spot, upright  -> SPACE to go
+running (17 s at speed 1.0), s = stop
+> move above object
+> descend to object (grip centre 9 mm above the table)
+> close gripper
+> lift
+> carry
+> line up
+> lower
+> open gripper
+> lift away
+> return home
+done. Click the next object
+going home...
+stopped: arm holds its pose (h = home)

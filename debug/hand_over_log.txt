@@ -1,0 +1,598 @@
+
+=== 2026-11-23 21:25:57 ===
+21:25:57 PAUSED. Press SPACE to start.
+21:26:46 started: take your hand away first
+21:26:51 ready: looking for the object and your hand
+21:27:00 target at x 243 y 35 mm (similarity 0.87), hand ready: planning the pick...
+21:27:00 pick OK in sim (lifted 75 mm, still held at the end): picking
+21:27:00 > move above object
+21:27:06 > descend to object (grip centre 9 mm above the table)
+21:27:09 > close gripper
+21:27:11 > lift
+21:27:14 holding the object: hold out your open hand, flat and still
+21:27:14 hand at x 143 y -157 z 28 mm: planning the hand-over...
+21:27:14 > move above your hand (tilt 70 deg)
+21:27:18 > lower to your hand
+21:27:22 > open gripper
+21:27:24 > up
+21:27:28 > return home
+21:27:34 done: take your hand away. Next round when the object and a hand are seen again
+21:27:38 ready: looking for the object and your hand
+
+=== 2026-11-23 21:28:02 ===
+21:28:02 PAUSED. Press SPACE to start.
+21:28:10 started
+21:28:16 target at x 252 y 8 mm (similarity 0.83), hand ready: planning the pick...
+21:28:17 pick OK in sim (lifted 72 mm, still held at the end): picking
+21:28:17 > move above object
+21:28:20 > descend to object (grip centre 11 mm above the table)
+21:28:21 > close gripper
+21:28:23 > lift
+21:28:24 holding the object: hold out your open hand, flat and still
+21:28:24 hand at x 153 y -148 z 29 mm: planning the hand-over...
+21:28:24 > move above your hand (tilt 70 deg)
+21:28:26 > lower to your hand
+21:28:28 > open gripper
+21:28:29 > up
+21:28:31 > return home
+21:28:34 done: take your hand away. Next round when the object and a hand are seen again
+21:28:37 ready: looking for the object and your hand
+21:28:43 target at x 255 y 39 mm (similarity 0.83), hand ready: planning the pick...
+21:28:43 pick OK in sim (lifted 73 mm, still held at the end): picking
+21:28:43 > move above object
+21:28:46 > descend to object (grip centre 9 mm above the table)
+21:28:48 > close gripper
+21:28:49 > lift
+21:28:50 holding the object: hold out your open hand, flat and still
+21:28:50 hand at x 289 y -148 z 29 mm: planning the hand-over...
+21:28:51 > move above your hand (tilt 60 deg)
+21:28:52 > lower to your hand
+21:28:54 > open gripper
+21:28:55 > up
+21:28:57 > return home
+21:29:00 done: take your hand away. Next round when the object and a hand are seen again
+21:29:00 ready: looking for the object and your hand
+21:29:06 target at x 238 y 64 mm (similarity 0.84), hand ready: planning the pick...
+21:29:06 pick OK in sim (lifted 72 mm, still held at the end): picking
+21:29:06 > move above object
+21:29:09 > descend to object (grip centre 11 mm above the table)
+21:29:10 > close gripper
+21:29:12 > lift
+21:29:13 holding the object: hold out your open hand, flat and still
+21:29:19 hand at x 277 y -132 z 29 mm: planning the hand-over...
+21:29:19 > move above your hand (tilt 70 deg)
+21:29:21 > lower to your hand
+21:29:23 > open gripper
+21:29:24 > up
+21:29:26 > return home
+21:29:29 done: take your hand away. Next round when the object and a hand are seen again
+21:29:31 ready: looking for the object and your hand
+21:29:33 target at x 283 y 70 mm (similarity 0.83), hand ready: planning the pick...
+21:29:33 pick OK in sim (lifted 73 mm, still held at the end): picking
+21:29:33 > move above object
+21:29:36 > descend to object (grip centre 9 mm above the table)
+21:29:38 > close gripper
+21:29:39 > lift
+21:29:41 holding the object: hold out your open hand, flat and still
+21:29:50 hand at x 173 y -119 z 29 mm: planning the hand-over...
+21:29:50 > move above your hand (tilt 70 deg)
+21:29:52 > lower to your hand
+21:29:54 > open gripper
+21:29:55 > up
+21:29:57 > return home
+21:30:00 done: take your hand away. Next round when the object and a hand are seen again
+21:30:00 ready: looking for the object and your hand
+21:30:11 target at x 273 y 51 mm (similarity 0.84), hand ready: planning the pick...
+21:30:11 pick OK in sim (lifted 73 mm, still held at the end): picking
+21:30:11 > move above object
+21:30:14 > descend to object (grip centre 10 mm above the table)
+21:30:16 > close gripper
+21:30:17 > lift
+21:30:18 holding the object: hold out your open hand, flat and still
+21:30:18 hand at x 145 y -138 z 30 mm: planning the hand-over...
+21:30:19 > move above your hand (tilt 70 deg)
+21:30:20 > lower to your hand
+21:30:22 > open gripper
+21:30:23 > up
+21:30:25 > return home
+21:30:28 done: take your hand away. Next round when the object and a hand are seen again
+21:30:28 ready: looking for the object and your hand
+21:30:42 target at x 265 y 42 mm (similarity 0.81), hand ready: planning the pick...
+21:30:42 pick OK in sim (lifted 74 mm, still held at the end): picking
+21:30:42 > move above object
+21:30:45 > descend to object (grip centre 8 mm above the table)
+21:30:46 > close gripper
+21:30:48 > lift
+21:30:49 holding the object: hold out your open hand, flat and still
+21:30:49 hand at x 131 y -134 z 30 mm: planning the hand-over...
+21:30:49 > move above your hand (tilt 70 deg)
+21:30:51 > lower to your hand
+21:30:53 > open gripper
+21:30:54 > up
+21:30:56 > return home
+21:30:59 done: take your hand away. Next round when the object and a hand are seen again
+21:31:01 ready: looking for the object and your hand
+21:31:07 target at x 315 y 74 mm (similarity 0.80), hand ready: planning the pick...
+21:31:07 pick OK in sim (lifted 74 mm, still held at the end): picking
+21:31:07 > move above object
+21:31:10 > descend to object (grip centre 11 mm above the table)
+21:31:12 > close gripper
+21:31:13 > lift
+21:31:14 holding the object: hold out your open hand, flat and still
+21:31:14 hand at x 80 y -165 z 27 mm: planning the hand-over...
+21:31:14 > move above your hand (tilt 70 deg)
+21:31:17 your hand moved 69 mm: stopped, aiming again
+21:31:20 hand at x 319 y -120 z 31 mm: planning the hand-over...
+21:31:20 > move above your hand (tilt 60 deg)
+21:31:21 your hand moved 53 mm: stopped, aiming again
+21:31:23 hand at x 77 y -166 z 26 mm: planning the hand-over...
+21:31:23 > move above your hand (tilt 70 deg)
+21:31:23 your hand moved 70 mm: stopped, aiming again
+21:31:25 hand at x 312 y -147 z 30 mm: planning the hand-over...
+21:31:25 > move above your hand (tilt 60 deg)
+21:31:26 your hand moved 60 mm: stopped, aiming again
+21:31:28 hand at x 134 y -176 z 33 mm: planning the hand-over...
+21:31:29 > move above your hand (tilt 70 deg)
+21:31:29 your hand moved 97 mm: stopped, aiming again
+21:31:31 hand at x 277 y -34 z 31 mm: planning the hand-over...
+21:31:31 > move above your hand (tilt 70 deg)
+21:31:32 your hand moved 107 mm: stopped, aiming again
+21:31:33 hand at x 121 y -156 z 27 mm: planning the hand-over...
+21:31:33 > move above your hand (tilt 70 deg)
+21:31:34 your hand moved 59 mm: stopped, aiming again
+21:31:35 hand at x 287 y -100 z 30 mm: planning the hand-over...
+21:31:35 > move above your hand (tilt 70 deg)
+21:31:36 your hand moved 154 mm: stopped, aiming again
+21:31:39 hand at x 121 y -134 z 28 mm: planning the hand-over...
+21:31:39 > move above your hand (tilt 70 deg)
+21:31:41 > lower to your hand
+21:31:43 > open gripper
+21:31:44 > up
+21:31:46 > return home
+21:31:49 done: take your hand away. Next round when the object and a hand are seen again
+21:31:53 ready: looking for the object and your hand
+21:31:58 target at x 273 y -159 mm (similarity 0.84), hand ready: planning the pick...
+21:31:58 pick OK in sim (lifted 77 mm, still held at the end): picking
+21:31:58 > move above object
+21:32:01 > descend to object (grip centre 10 mm above the table)
+21:32:03 > close gripper
+21:32:04 > lift
+21:32:06 holding the object: hold out your open hand, flat and still
+21:32:06 hand at x 87 y -151 z 28 mm: planning the hand-over...
+21:32:06 > move above your hand (tilt 70 deg)
+21:32:08 > lower to your hand
+21:32:08 your hand moved 252 mm: stopped, aiming again
+21:32:10 hand at x 309 y -89 z 31 mm: planning the hand-over...
+21:32:10 > move above your hand (tilt 60 deg)
+21:32:11 > lower to your hand
+21:32:13 > open gripper
+21:32:14 > up
+21:32:16 > return home
+21:32:19 done: take your hand away. Next round when the object and a hand are seen again
+21:32:19 ready: looking for the object and your hand
+21:32:24 target at x 265 y -150 mm (similarity 0.84), hand ready: planning the pick...
+21:32:24 pick OK in sim (lifted 76 mm, still held at the end): picking
+21:32:24 > move above object
+21:32:27 > descend to object (grip centre 10 mm above the table)
+21:32:28 > close gripper
+21:32:29 > lift
+21:32:31 holding the object: hold out your open hand, flat and still
+21:32:36 stopped, PAUSED: the arm holds the object (SPACE = continue to your hand, h = home)
+21:32:37 stopped, PAUSED: the arm holds the object (SPACE = continue to your hand, h = home)
+21:32:37 stopped, PAUSED: the arm holds the object (SPACE = continue to your hand, h = home)
+21:32:37 stopped, PAUSED: the arm holds the object (SPACE = continue to your hand, h = home)
+21:32:37 stopped, PAUSED: the arm holds the object (SPACE = continue to your hand, h = home)
+21:32:38 stopped, PAUSED: the arm holds the object (SPACE = continue to your hand, h = home)
+21:32:39 > home
+21:33:02 started: take your hand away first
+21:33:09 PAUSED (SPACE to start)
+21:33:10 started: take your hand away first
+21:33:13 ready: looking for the object and your hand
+21:33:15 target at x 196 y 4 mm (similarity 0.83), hand ready: planning the pick...
+21:33:15 pick OK in sim (lifted 75 mm, still held at the end): picking
+21:33:15 > move above object
+21:33:18 > descend to object (grip centre 10 mm above the table)
+21:33:20 > close gripper
+21:33:21 > lift
+21:33:23 holding the object: hold out your open hand, flat and still
+21:33:23 hand at x 142 y -139 z 32 mm: planning the hand-over...
+21:33:23 > move above your hand (tilt 70 deg)
+21:33:24 > lower to your hand
+21:33:26 > open gripper
+21:33:27 > up
+21:33:29 > return home
+21:33:32 done: take your hand away. Next round when the object and a hand are seen again
+21:33:32 ready: looking for the object and your hand
+
+=== 2026-11-23 21:52:28 ===
+21:52:28 PAUSED. Press SPACE to start.
+21:52:44 started: take your hand away first
+21:52:53 ready: looking for the object and your hand
+21:52:55 green_cube (priority 1) at x 281 y 7 mm (similarity 0.81), hand ready: planning the pick...
+21:52:56 pick OK in sim (lifted 74 mm, still held at the end): picking
+21:52:56 > move above object
+21:52:59 > descend to object (grip centre 11 mm above the table)
+21:53:00 > close gripper
+21:53:01 > lift
+21:53:03 holding the object: hold out your open hand, flat and still
+21:53:03 hand at x 125 y -158 z 29 mm: planning the hand-over...
+21:53:03 > move above your hand (tilt 70 deg)
+21:53:05 > lower to your hand
+21:53:07 > open gripper
+21:53:08 > up
+21:53:10 > return home
+21:53:13 done: take your hand away. Next round when the object and a hand are seen again
+21:53:19 ready: looking for the object and your hand
+21:53:21 cube2 (priority 2) at x 223 y -83 mm (similarity 0.94), hand ready: planning the pick...
+21:53:21 pick OK in sim (lifted 74 mm, still held at the end): picking
+21:53:21 > move above object
+21:53:24 > descend to object (grip centre 9 mm above the table)
+21:53:26 > close gripper
+21:53:27 > lift
+21:53:28 holding the object: hold out your open hand, flat and still
+21:53:28 hand at x 135 y -171 z 27 mm: planning the hand-over...
+21:53:28 > move above your hand (tilt 70 deg)
+21:53:30 > lower to your hand
+21:53:32 > open gripper
+21:53:33 > up
+21:53:35 > return home
+21:53:38 done: take your hand away. Next round when the object and a hand are seen again
+21:53:40 ready: looking for the object and your hand
+21:53:43 cube2 (priority 2) at x 229 y -66 mm (similarity 0.91), hand ready: planning the pick...
+21:53:43 pick OK in sim (lifted 74 mm, still held at the end): picking
+21:53:43 > move above object
+21:53:46 > descend to object (grip centre 10 mm above the table)
+21:53:47 > close gripper
+21:53:49 > lift
+21:53:50 holding the object: hold out your open hand, flat and still
+21:53:50 hand at x 145 y -169 z 29 mm: planning the hand-over...
+21:53:50 > move above your hand (tilt 70 deg)
+21:53:52 > lower to your hand
+21:53:52 your hand moved 57 mm: stopped, aiming again
+21:53:55 hand at x 146 y -197 z 31 mm: planning the hand-over...
+21:53:55 > move above your hand (tilt 70 deg)
+21:53:57 > lower to your hand
+21:53:59 > open gripper
+21:54:00 > up
+21:54:02 > return home
+21:54:05 done: take your hand away. Next round when the object and a hand are seen again
+21:54:22 ready: looking for the object and your hand
+21:54:25 cube2 (priority 2) at x 192 y -48 mm (similarity 0.87), hand ready: planning the pick...
+21:54:25 pick OK in sim (lifted 74 mm, still held at the end): picking
+21:54:25 > move above object
+21:54:28 > descend to object (grip centre 9 mm above the table)
+21:54:29 > close gripper
+21:54:31 > lift
+21:54:32 holding the object: hold out your open hand, flat and still
+21:54:32 hand at x 117 y -169 z 28 mm: planning the hand-over...
+21:54:32 > move above your hand (tilt 70 deg)
+21:54:34 > lower to your hand
+21:54:36 > open gripper
+21:54:37 > up
+21:54:39 > return home
+21:54:42 done: take your hand away. Next round when the object and a hand are seen again
+21:54:48 ready: looking for the object and your hand
+21:54:52 cube2 (priority 2) at x 211 y -17 mm (similarity 0.87), hand ready: planning the pick...
+21:54:52 pick OK in sim (lifted 75 mm, still held at the end): picking
+21:54:52 > move above object
+21:54:55 > descend to object (grip centre 10 mm above the table)
+21:54:57 > close gripper
+21:54:58 > lift
+21:55:00 holding the object: hold out your open hand, flat and still
+21:55:00 hand at x 297 y -152 z 31 mm: planning the hand-over...
+21:55:00 > move above your hand (tilt 60 deg)
+21:55:01 > lower to your hand
+21:55:03 > open gripper
+21:55:04 > up
+21:55:06 > return home
+21:55:09 done: take your hand away. Next round when the object and a hand are seen again
+21:55:11 ready: looking for the object and your hand
+
+=== 2026-11-23 22:07:29 ===
+22:07:29 PAUSED. Press SPACE to start.
+22:07:32 > home
+22:07:38 started
+22:07:41 cube2 (priority 2) at x 147 y -88 mm (similarity 0.84), yaw -55 deg (depth alone -62, edges 0.55), width 25 mm, hand ready: planning the pick...
+22:07:42 pick OK in sim (lifted 76 mm, still held at the end): picking
+22:07:42 > move above object
+22:07:45 > descend to object (grip centre 11 mm above the table)
+22:07:46 > close gripper
+22:07:47 > lift
+22:07:49 holding the object: hold out your open hand, flat and still
+22:07:49 hand at x 290 y -108 z 30 mm: planning the hand-over...
+22:07:49 > move above your hand (tilt 70 deg)
+22:07:51 > lower to your hand
+22:07:53 > open gripper
+22:07:54 > up
+22:07:56 > return home
+22:07:59 done: take your hand away. Next round when the object and a hand are seen again
+22:08:02 ready: looking for the object and your hand
+22:08:04 cube2 (priority 2) at x 144 y -69 mm (similarity 0.87), yaw 45 deg (depth alone 52, edges 0.40), width 28 mm, hand ready: planning the pick...
+22:08:06 sim check of the pick FAILED: lifted -0 mm, DROPPED at the end  -> move the object (150-300 mm from the base); trying again in 5 s
+22:08:11 cube2 (priority 2) at x 144 y -70 mm (similarity 0.85), yaw 45 deg (depth alone 51, edges 0.41), width 28 mm, hand ready: planning the pick...
+22:08:13 sim check of the pick FAILED: lifted -0 mm, DROPPED at the end  -> move the object (150-300 mm from the base); trying again in 5 s
+22:08:21 cube2 (priority 2) at x 144 y -70 mm (similarity 0.89), yaw 45 deg (depth alone 50, edges 0.36), width 28 mm, hand ready: planning the pick...
+22:08:23 sim check of the pick FAILED: lifted -0 mm, DROPPED at the end  -> move the object (150-300 mm from the base); trying again in 5 s
+22:08:30 green_cube (priority 1) at x 224 y 10 mm (similarity 0.86), yaw -5 deg (depth alone -7, edges 0.67), width 28 mm, hand ready: planning the pick...
+22:08:31 pick OK in sim (lifted 73 mm, still held at the end): picking
+22:08:31 > move above object
+22:08:34 > descend to object (grip centre 11 mm above the table)
+22:08:35 > close gripper
+22:08:36 > lift
+22:08:38 holding the object: hold out your open hand, flat and still
+22:08:38 hand at x 207 y -150 z 28 mm: planning the hand-over...
+22:08:38 > move above your hand (tilt 70 deg)
+22:08:40 > lower to your hand
+22:08:42 > open gripper
+22:08:43 > up
+22:08:45 > return home
+
+=== 2026-11-23 22:13:38 ===
+22:13:38 PAUSED. Press SPACE to start.
+22:13:42 > home
+22:13:49 started: take your hand away first
+22:13:54 PAUSED (SPACE to start)
+22:13:55 started: take your hand away first
+22:13:57 ready: looking for the object and your hand
+22:14:04 cube2 (priority 2) at x 231 y -67 mm (similarity 0.86), yaw -15 deg (depth alone -10, edges 0.52), width 28 mm, hand ready: planning the pick...
+22:14:04 pick OK in sim (lifted 72 mm, still held at the end): picking
+22:14:04 > move above object
+22:14:07 > descend to object (grip centre 11 mm above the table)
+22:14:09 > close gripper
+22:14:10 > lift
+22:14:11 holding the object: hold out your open hand, flat and still
+22:14:11 hand at x 118 y -134 z 31 mm: planning the hand-over...
+22:14:12 > move above your hand (tilt 60 deg)
+22:14:13 > lower to your hand
+22:14:15 > open gripper
+22:14:16 > up
+22:14:18 > return home
+22:14:21 done: take your hand away. Next round when the object and a hand are seen again
+22:14:24 ready: looking for the object and your hand
+22:14:29 green_cube (priority 1) at x 276 y 63 mm (similarity 0.83), yaw 41 deg (depth alone 51, edges 0.58), width 30 mm, hand ready: planning the pick...
+22:14:30 pick OK in sim (lifted 74 mm, still held at the end): picking
+22:14:30 > move above object
+22:14:33 > descend to object (grip centre 10 mm above the table)
+22:14:34 > close gripper
+22:14:35 > lift
+22:14:37 holding the object: hold out your open hand, flat and still
+22:14:37 hand at x 185 y -130 z 29 mm: planning the hand-over...
+22:14:37 > move above your hand (tilt 70 deg)
+22:14:38 > lower to your hand
+22:14:40 > open gripper
+22:14:41 > up
+22:14:43 > return home
+22:14:46 done: take your hand away. Next round when the object and a hand are seen again
+22:14:46 ready: looking for the object and your hand
+22:14:52 cube2 (priority 2) at x 197 y -21 mm (similarity 0.86), yaw -33 deg (depth alone -34, edges 0.39), width 24 mm, hand ready: planning the pick...
+22:14:52 pick OK in sim (lifted 72 mm, still held at the end): picking
+22:14:52 > move above object
+22:14:55 > descend to object (grip centre 11 mm above the table)
+22:14:56 > close gripper
+22:14:57 > lift
+22:14:59 holding the object: hold out your open hand, flat and still
+22:14:59 hand at x 273 y -136 z 23 mm: planning the hand-over...
+22:14:59 > move above your hand (tilt 70 deg)
+22:15:01 > lower to your hand
+22:15:03 > open gripper
+22:15:04 > up
+22:15:06 > return home
+22:15:09 done: take your hand away. Next round when the object and a hand are seen again
+22:15:09 ready: looking for the object and your hand
+22:15:31 green_cube (priority 1) at x 128 y -101 mm (similarity 0.87), yaw -33 deg (depth alone -46, edges 0.65), width 20 mm, hand ready: planning the pick...
+22:15:31 pick OK in sim (lifted 78 mm, still held at the end): picking
+22:15:31 > move above object
+22:15:34 > descend to object (grip centre 11 mm above the table)
+22:15:35 > close gripper
+22:15:37 > lift
+22:15:38 holding the object: hold out your open hand, flat and still
+22:15:38 hand at x 266 y -97 z 25 mm: planning the hand-over...
+22:15:38 > move above your hand (tilt 70 deg)
+22:15:40 > lower to your hand
+22:15:42 > open gripper
+22:15:43 > up
+22:15:45 > return home
+22:15:48 done: take your hand away. Next round when the object and a hand are seen again
+22:15:48 ready: looking for the object and your hand
+22:15:50 cube2 (priority 2) at x 191 y 62 mm (similarity 0.90), yaw -29 deg (depth alone -30, edges 0.58), width 30 mm, hand ready: planning the pick...
+22:15:51 pick OK in sim (lifted 73 mm, still held at the end): picking
+22:15:51 > move above object
+22:15:54 > descend to object (grip centre 10 mm above the table)
+22:15:55 > close gripper
+22:15:57 > lift
+22:15:58 holding the object: hold out your open hand, flat and still
+22:15:58 hand at x 163 y -135 z 30 mm: planning the hand-over...
+22:15:58 > move above your hand (tilt 70 deg)
+22:16:00 > lower to your hand
+22:16:02 > open gripper
+22:16:03 > up
+22:16:05 > return home
+22:16:08 done: take your hand away. Next round when the object and a hand are seen again
+22:16:08 ready: looking for the object and your hand
+22:16:20 green_cube (priority 1) at x 192 y 61 mm (similarity 0.87), yaw -85 deg (depth alone -89, edges 0.57), width 28 mm, hand ready: planning the pick...
+22:16:20 pick OK in sim (lifted 74 mm, still held at the end): picking
+22:16:20 > move above object
+22:16:23 > descend to object (grip centre 8 mm above the table)
+22:16:25 > close gripper
+22:16:26 > lift
+22:16:27 holding the object: hold out your open hand, flat and still
+22:16:27 hand at x 149 y -140 z 31 mm: planning the hand-over...
+22:16:27 > move above your hand (tilt 70 deg)
+22:16:29 > lower to your hand
+22:16:31 > open gripper
+22:16:32 > up
+22:16:34 > return home
+22:16:37 done: take your hand away. Next round when the object and a hand are seen again
+22:16:38 ready: looking for the object and your hand
+22:16:44 cube2 (priority 2) at x 236 y -21 mm (similarity 0.87), yaw 87 deg (depth alone 85, edges 0.38), width 25 mm, hand ready: planning the pick...
+22:16:45 pick OK in sim (lifted 75 mm, still held at the end): picking
+22:16:45 > move above object
+22:16:48 > descend to object (grip centre 8 mm above the table)
+22:16:49 > close gripper
+22:16:50 > lift
+22:16:52 holding the object: hold out your open hand, flat and still
+22:16:52 hand at x 136 y -147 z 30 mm: planning the hand-over...
+22:16:52 > move above your hand (tilt 70 deg)
+22:16:53 > lower to your hand
+22:16:55 > open gripper
+22:16:56 > up
+22:16:59 > return home
+22:17:02 done: take your hand away. Next round when the object and a hand are seen again
+22:17:02 ready: looking for the object and your hand
+
+
+=== 2026-11-23 22:21:44 ===
+22:21:45 PAUSED. Press SPACE to start.
+22:21:53 started: take your hand away first
+22:21:57 ready: looking for the object and your hand
+22:21:59 green_cube (priority 1) at x 157 y -50 mm (similarity 0.84), yaw -9 deg (depth alone -15, edges 0.43), width 28 mm, hand ready: planning the pick...
+22:22:00 pick OK in sim (lifted 76 mm, still held at the end): picking
+22:22:00 > move above object
+22:22:03 > descend to object (grip centre 11 mm above the table)
+22:22:04 > close gripper
+22:22:05 > lift
+22:22:07 holding the object: hold out your open hand, flat and still
+22:22:07 hand at x 98 y -162 z 29 mm: planning the hand-over...
+22:22:07 > move above your hand (tilt 70 deg)
+22:22:09 > lower to your hand
+22:22:11 > open gripper
+22:22:12 > up
+22:22:14 > return home
+22:22:17 done: take your hand away. Next round when the object and a hand are seen again
+22:22:17 ready: looking for the object and your hand
+22:23:01 green_cube (priority 1) at x 80 y -104 mm (similarity 0.89), yaw -31 deg (depth alone -29, edges 0.61), width 29 mm, hand ready: planning the pick...
+22:23:04 sim check of the pick FAILED: lifted 0 mm, DROPPED at the end  -> move the object (150-300 mm from the base); trying again in 5 s
+22:23:11 green_cube (priority 1) at x 142 y -97 mm (similarity 0.84), yaw -45 deg (depth alone -60, edges 0.41), width 20 mm, hand ready: planning the pick...
+22:23:11 pick OK in sim (lifted 73 mm, still held at the end): picking
+22:23:11 > move above object
+22:23:14 > descend to object (grip centre 11 mm above the table)
+22:23:15 > close gripper
+22:23:17 > lift
+22:23:18 holding the object: hold out your open hand, flat and still
+22:23:26 hand at x 246 y -119 z 23 mm: planning the hand-over...
+22:23:26 > move above your hand (tilt 70 deg)
+22:23:28 > lower to your hand
+22:23:30 > open gripper
+22:23:31 > up
+22:23:33 > return home
+22:23:36 done: take your hand away. Next round when the object and a hand are seen again
+22:23:40 ready: looking for the object and your hand
+22:23:57 cube2 (priority 2) at x 203 y -38 mm (similarity 0.84), yaw 15 deg (depth alone 15, edges 0.34), width 25 mm, hand ready: planning the pick...
+22:23:57 pick OK in sim (lifted 75 mm, still held at the end): picking
+22:23:57 > move above object
+22:24:00 > descend to object (grip centre 10 mm above the table)
+22:24:02 > close gripper
+22:24:03 > lift
+22:24:05 holding the object: hold out your open hand, flat and still
+22:24:05 hand at x 131 y -143 z 30 mm: planning the hand-over...
+22:24:05 > move above your hand (tilt 70 deg)
+22:24:06 > lower to your hand
+22:24:08 > open gripper
+22:24:09 > up
+22:24:11 > return home
+22:24:14 done: take your hand away. Next round when the object and a hand are seen again
+22:24:20 ready: looking for the object and your hand
+22:24:23 green_cube (priority 1) at x 192 y -63 mm (similarity 0.88), yaw -35 deg (depth alone -30, edges 0.41), width 27 mm, hand ready: planning the pick...
+22:24:23 pick OK in sim (lifted 75 mm, still held at the end): picking
+22:24:23 > move above object
+22:24:26 > descend to object (grip centre 11 mm above the table)
+22:24:28 > close gripper
+22:24:29 > lift
+22:24:30 holding the object: hold out your open hand, flat and still
+22:24:31 hand at x 294 y -119 z 23 mm: planning the hand-over...
+22:24:31 > move above your hand (tilt 70 deg)
+22:24:33 > lower to your hand
+22:24:35 > open gripper
+22:24:36 > up
+22:24:38 > return home
+22:24:41 done: take your hand away. Next round when the object and a hand are seen again
+22:24:50 ready: looking for the object and your hand
+22:25:17 cube2 (priority 2) at x 195 y 15 mm (similarity 0.90), yaw -33 deg (depth alone -53, edges 0.48), width 27 mm, hand ready: planning the pick...
+22:25:17 pick OK in sim (lifted 74 mm, still held at the end): picking
+22:25:17 > move above object
+22:25:20 > descend to object (grip centre 10 mm above the table)
+22:25:22 > close gripper
+22:25:23 > lift
+22:25:25 holding the object: hold out your open hand, flat and still
+22:25:25 hand at x 269 y -117 z 23 mm: planning the hand-over...
+22:25:25 > move above your hand (tilt 70 deg)
+22:25:26 > lower to your hand
+22:25:28 > open gripper
+22:25:29 > up
+22:25:31 > return home
+22:25:34 done: take your hand away. Next round when the object and a hand are seen again
+22:25:34 ready: looking for the object and your hand
+22:25:51 green_cube (priority 1) at x 195 y -28 mm (similarity 0.83), yaw 81 deg (depth alone 81, edges 0.36), width 24 mm, hand ready: planning the pick...
+22:25:52 pick OK in sim (lifted 75 mm, still held at the end): picking
+22:25:52 > move above object
+22:25:55 > descend to object (grip centre 8 mm above the table)
+22:25:56 > close gripper
+22:25:58 > lift
+22:25:59 holding the object: hold out your open hand, flat and still
+22:25:59 hand at x 326 y -114 z 24 mm: planning the hand-over...
+22:25:59 > move above your hand (tilt 60 deg)
+22:26:01 > lower to your hand
+22:26:03 > open gripper
+22:26:04 > up
+22:26:06 > return home
+22:26:09 done: take your hand away. Next round when the object and a hand are seen again
+22:26:23 ready: looking for the object and your hand
+22:26:25 cube2 (priority 2) at x 179 y -77 mm (similarity 0.86), yaw -1 deg (depth alone -0, edges 0.69), width 29 mm, hand ready: planning the pick...
+22:26:25 pick OK in sim (lifted 74 mm, still held at the end): picking
+22:26:25 > move above object
+22:26:28 > descend to object (grip centre 10 mm above the table)
+22:26:30 > close gripper
+22:26:31 > lift
+22:26:32 holding the object: hold out your open hand, flat and still
+22:26:32 hand at x 316 y -115 z 24 mm: planning the hand-over...
+22:26:32 > move above your hand (tilt 60 deg)
+22:26:34 > lower to your hand
+22:26:36 > open gripper
+22:26:37 > up
+22:26:39 > return home
+22:26:42 done: take your hand away. Next round when the object and a hand are seen again
+22:26:42 ready: looking for the object and your hand
+22:27:09 cube2 (priority 2) at x 305 y 22 mm (similarity 0.89), yaw 83 deg (depth alone 76, edges 0.54), width 28 mm, hand ready: planning the pick...
+22:27:09 pick OK in sim (lifted 76 mm, still held at the end): picking
+22:27:09 > move above object
+22:27:12 > descend to object (grip centre 8 mm above the table)
+22:27:14 > close gripper
+22:27:15 > lift
+22:27:16 holding the object: hold out your open hand, flat and still
+22:27:16 hand at x 113 y -141 z 31 mm: planning the hand-over...
+22:27:16 > move above your hand (tilt 70 deg)
+22:27:18 > lower to your hand
+22:27:20 > open gripper
+22:27:21 > up
+22:27:23 > return home
+22:27:26 done: take your hand away. Next round when the object and a hand are seen again
+22:27:26 ready: looking for the object and your hand
+22:32:18 cube2 (priority 2) at x 218 y 6 mm (similarity 0.85), yaw -19 deg (depth alone -1, edges 0.53), width 11 mm, hand ready: planning the pick...
+22:32:18 pick OK in sim (lifted 76 mm, still held at the end): picking
+22:32:18 > move above object
+22:32:21 > descend to object (grip centre 11 mm above the table)
+22:32:23 > close gripper
+22:32:24 > lift
+22:32:25 holding the object: hold out your open hand, flat and still
+22:32:25 hand at x 303 y -147 z 25 mm: planning the hand-over...
+22:32:26 > move above your hand (tilt 60 deg)
+22:32:27 > lower to your hand
+22:32:29 > open gripper
+22:32:30 > up
+22:32:32 > return home
+22:32:35 done: take your hand away. Next round when the object and a hand are seen again
+22:32:35 ready: looking for the object and your hand
+22:32:38 green_cube (priority 1) at x 145 y -93 mm (similarity 0.83), yaw -17 deg (depth alone -15, edges 0.54), width 26 mm, hand ready: planning the pick...
+22:32:38 pick OK in sim (lifted 74 mm, still held at the end): picking
+22:32:38 > move above object
+22:32:41 > descend to object (grip centre 11 mm above the table)
+22:32:43 > close gripper
+22:32:44 > lift
+22:32:46 holding the object: hold out your open hand, flat and still
+22:32:46 hand at x 312 y -52 z 26 mm: planning the hand-over...
+22:32:46 > move above your hand (tilt 70 deg)
+22:32:48 > lower to your hand
+22:32:50 > open gripper
+22:32:51 > up
+22:32:53 > return home
+22:32:56 done: take your hand away. Next round when the object and a hand are seen again
