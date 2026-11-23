@@ -1638,3 +1638,129 @@ running (17 s at speed 1.0), s = stop
 > lift away
 > return home
 done. Click the next object
+
+=== 2026-11-23 20:03:14 ===
+object at x 279 y -30 mm: height 30, width 31, length 33 mm, yaw -33 deg (table z -8)
+place at x 55 y -130 mm: planning...  (SPACE to go)
+still planning... starts by itself when ready
+plan ready in 0.8 s, sim check OK: lifted 80 mm, landed 3 mm from the spot, upright
+running (18 s at speed 1.0), s = stop
+> move above object
+> descend to object (grip centre 11 mm above the table)
+> close gripper
+> lift
+> carry
+> line up
+> lower
+> open gripper
+> lift away
+> return home
+done. Click the next object
+nothing taller than 8 mm under the click (table z here -9 mm)
+nothing taller than 8 mm under the click (table z here -9 mm)
+object at x 49 y -128 mm: height 27, width 31, length 31 mm, yaw 74 deg (table z -8)
+place at x 294 y -16 mm: planning...  (SPACE to go)
+still planning... starts by itself when ready
+plan ready in 0.6 s, sim check OK: lifted 83 mm, landed 6 mm from the spot, upright
+running (18 s at speed 1.0), s = stop
+> move above object
+> descend to object (grip centre 11 mm above the table)
+> close gripper
+> lift
+> carry
+> line up
+> lower
+> open gripper
+> lift away
+> return home
+done. Click the next object
+
+=== 2026-11-23 20:09:41 ===
+object at x 71 y -102 mm: height 27, width 24, length 31 mm, yaw -79 deg (table z -6)
+click the object, then the place spot, then SPACE
+place at x 229 y -134 mm: planning...  (SPACE to go)
+still planning... starts by itself when ready
+sim check FAILED: lifted 0 mm, landed 161 mm from the spot, upright (cannot grab it from the object side: from the object)
+NOT possible: the gripper cannot take the OBJECT where it is (107 mm from the base axis). Move it to 130-300 mm, then r and choose it again
+place at x 224 y -137 mm: planning...  (SPACE to go)
+still planning... starts by itself when ready
+sim check FAILED: lifted 0 mm, landed 157 mm from the spot, upright (cannot grab it from the object side: from the object)
+NOT possible: the gripper cannot take the OBJECT where it is (107 mm from the base axis). Move it to 130-300 mm, then r and choose it again
+place at x 232 y -6 mm: planning...  (SPACE to go)
+still planning... starts by itself when ready
+sim check FAILED: lifted 0 mm, landed 187 mm from the spot, upright (cannot grab it from the object side: from the object)
+NOT possible: the gripper cannot take the OBJECT where it is (107 mm from the base axis). Move it to 130-300 mm, then r and choose it again
+reset: click the OBJECT (its top)
+object at x 217 y -80 mm: height 26, width 31, length 32 mm, yaw 77 deg (table z -6)
+place at x 89 y -79 mm: planning...  (SPACE to go)  NOTE: only 94 mm from the base axis: picking it up again from there may not work
+still planning... starts by itself when ready
+sim check FAILED: lifted 83 mm, landed 27 mm from the spot, upright
+NOT possible from here: click another PLACE spot (object kept), or r for another object
+place at x 330 y 81 mm: planning...  (SPACE to go)
+still planning... starts by itself when ready
+plan ready in 2.2 s, sim check OK: lifted 87 mm, landed 4 mm from the spot, upright
+running (20 s at speed 1.0), s = stop
+> move above object
+> descend to object (grip centre 9 mm above the table)
+> close gripper
+> lift
+> carry
+> line up
+> lower
+> open gripper
+> lift away
+> return home
+done. Click the next object
+object at x 326 y 80 mm: height 28, width 31, length 37 mm, yaw -58 deg (table z -2)
+place at x 166 y -35 mm: planning...  (SPACE to go)
+still planning... starts by itself when ready
+plan ready in 1.6 s, sim check OK: lifted 85 mm, landed 3 mm from the spot, upright
+running (17 s at speed 1.0), s = stop
+> move above object
+> descend to object (grip centre 9 mm above the table)
+> close gripper
+> lift
+> carry
+> line up
+> lower
+> open gripper
+> lift away
+> return home
+done. Click the next object
+object at x 174 y -32 mm: height 23, width 29, length 32 mm, yaw -76 deg (table z -4)
+place at x 229 y -135 mm: planning...  (SPACE to go)
+plan ready in 0.3 s, sim check OK: lifted 83 mm, landed 5 mm from the spot, upright  -> SPACE to go
+running (16 s at speed 1.0), s = stop
+> move above object
+> descend to object (grip centre 10 mm above the table)
+> close gripper
+> lift
+> carry
+> line up
+> lower
+> open gripper
+> lift away
+> return home
+done. Click the next object
+object at x 223 y -129 mm: height 24, width 21, length 34 mm, yaw 79 deg (table z -6)
+place at x 380 y 116 mm: planning...  (SPACE to go)
+still planning... starts by itself when ready
+cannot plan: Cannot reach [380. 116.] mm with the gripper pointing down. Move it to 150-300 mm from the base.
+NOT possible from here: click another PLACE spot (object kept), or r for another object
+reset: click the OBJECT (its top)
+object at x 224 y -129 mm: height 25, width 21, length 34 mm, yaw 76 deg (table z -6)
+place at x 198 y 66 mm: planning...  (SPACE to go)
+still planning... starts by itself when ready
+plan ready in 0.4 s, sim check OK: lifted 80 mm, landed 9 mm from the spot, upright
+running (17 s at speed 1.0), s = stop
+> move above object
+> descend to object (grip centre 9 mm above the table)
+> close gripper
+> lift
+> carry
+> line up
+> lower
+> open gripper
+> lift away
+> return home
+done. Click the next object

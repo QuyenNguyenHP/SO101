@@ -304,7 +304,46 @@ python record_home.py                             # ghi tư thế home
 python detector.py "green cube, tape measure"     # thử nhận diện trên 1 ảnh -> debug/detect.jpg
 ```
 
-**Phím trong cửa sổ `camera_pick`:**
+### 13.1 Hiệu chuẩn bàn nhanh bằng `table_calib.py`
+
+Dùng khi mới lắp camera, sau khi di chuyển camera/đế robot, hoặc sau khi hiệu chuẩn lại servo. Trước đó, servo phải được hiệu chuẩn với id `my_follower` theo [SETUP_ROBOT.md](../SETUP_ROBOT.md). Cố định camera và đế robot trong suốt quá trình thu điểm và gắp vật.
+
+**Chuẩn bị và chạy:** đánh dấu **6–10 dấu X** rải đều trên vùng làm việc, cách đế khoảng **180–320 mm**, tránh xếp tất cả trên một đường thẳng. Đóng các chương trình đang dùng camera hoặc cổng serial.
+
+```bash
+conda activate lerobot
+cd ~/robot/SO101
+systemctl --user stop d415-lab.service  # nếu dịch vụ này đang giữ camera
+python table_calib.py
+```
+
+1. **Đỡ tay robot trước khi nhấn Enter** ở terminal: script sẽ tắt torque để có thể di chuyển tay bằng tay.
+2. Click vào cửa sổ ảnh để cửa sổ nhận phím. Đặt **đầu tận cùng của hàm kẹp cố định** (hàm không chuyển động khi đóng/mở kẹp) chạm nhẹ mặt bàn, đúng tâm một dấu X. Giữ yên rồi nhấn **SPACE**; script lấy trung bình 10 lần đọc servo. Nếu báo tay đã chuyển động, giữ yên và nhấn lại.
+3. Đưa tay ra khỏi dấu X để camera nhìn rõ, rồi **click trái đúng tâm dấu X vừa chạm**. Khi hiện `pair N saved`, cặp điểm đã được lưu vào `table_points.json`; dấu đã thu hiện màu xanh kèm số. Có thể click trước rồi chạm sau, nhưng phải là cùng một dấu X.
+4. Lặp lại với các dấu khác. Nhấn **u** để xoá cặp đang thu dở; nếu không có cặp dở thì xoá cặp đã lưu cuối cùng. Nếu báo `REJECTED`, thu lại dấu đó; nếu báo `no depth there`, click hơi lệch sang vùng có độ sâu ngay cạnh tâm dấu.
+5. Có ít nhất **6 cặp**, nhấn **c** để tính và lưu. Đọc kết quả ở **terminal**: sai số XY dự đoán từng điểm từ các điểm còn lại (leave-one-out) trung bình **< 4 mm = GOOD**, **< 8 mm = usable**. Nếu sai số lớn, kiểm tra các điểm bị đánh dấu và thu lại/thêm điểm rải rộng hơn. Nếu script báo thay đổi offset vượt **12°**, nó không lưu kết quả mới; cần hiệu chuẩn lại servo rồi thu lại điểm.
+6. Nhấn **q** để thoát, tiếp tục đỡ tay khi script yêu cầu tắt torque. Sau đó kiểm tra bằng lệnh bên dưới.
+
+```bash
+python verify_click.py
+```
+
+Click một dấu X, nhấn **g** để lập kế hoạch rồi **y** để cho tay di chuyển: đầu hàm cố định tới phía trên dấu, mặc định cách điểm đó **4 cm**. Kiểm tra nhiều vị trí, kể cả dấu chưa dùng để hiệu chuẩn; nhấn **q** để thoát. Trong cửa sổ này, **SPACE chạy ngay không hỏi**, còn **+ / -** đổi độ cao và có thể làm tay di chuyển lại.
+
+**Chạy tiếp hoặc tính lại:**
+
+```bash
+python table_calib.py --resume      # giữ các cặp đã lưu, thu thêm điểm
+python table_calib.py --solve-only  # tính và ghi lại kết quả từ JSON, không kết nối camera/tay
+# Nếu cổng hoặc id khác mặc định:
+python table_calib.py --port /dev/ttyACM1 --robot-id my_follower
+```
+
+Chạy không có `--resume` bắt đầu bộ điểm mới; khi lưu cặp đầu tiên, `table_points.json` cũ sẽ bị ghi đè. Chỉ tiếp tục bộ điểm cũ khi camera, đế robot, mặt bàn và hiệu chuẩn servo không thay đổi. `--dry` chỉ thử camera với tay giả, không dùng để hiệu chuẩn tay thật.
+
+**File kết quả:** `table_points.json` lưu các cặp đo; nhấn **c** ghi `T_base_cam.npy`, `T_base_cam.json` và `joint_offsets.json`. Khởi động lại các script điều khiển sau khi lưu để nạp hiệu chuẩn mới. Hướng dẫn đầy đủ: [SETUP_TABLE_2D_CALIB.md](../SETUP_TABLE_2D_CALIB.md).
+
+### 13.2 Phím trong cửa sổ `camera_pick`
 
 | Phím | Tác dụng |
 |---|---|
